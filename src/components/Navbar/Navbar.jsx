@@ -29,6 +29,7 @@ export default function Navbar() {
         >
             <div className="w-full px-6 py-4 flex items-center justify-between">
                 {/* Logo */}
+        
                 <div className="flex items-center">
                     <Link to="/" className="flex items-center">
                         <img src={Logo} alt="Logo" className="h-12 w-auto mr-3" />
