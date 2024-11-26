@@ -8,6 +8,8 @@ import Products from './components/Products/Products'
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import ItemList from './components/ItemList/ItemList';
+import CartPage from './components/Cart/Cart';
+
 
 function App() {
  return (
@@ -21,6 +23,7 @@ function App() {
         <Route path="/products/:productId" element={<ItemDetail />} />
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path="/cart" element={<CartPage />} /> 
       </Routes>
       <Footer />
       </BrowserRouter>

@@ -6,7 +6,8 @@ export const products = [
             title: 'Zapatillas adidas VL Court 3.0', 
             price: '60.990',
             stock: 10,
-            sizes: ['42','43','44']  
+            sizes: ['42','43','44'],
+            category: 'nino',
         },
         
         {
@@ -15,7 +16,8 @@ export const products = [
              title: 'Zapatillas Nike Dunk Low Viotech', 
              price: '211.990',
              stock: 10,
-             sizes: ['42','43','44']  
+             sizes: ['42','43','44'],
+             category: 'adulto' 
             
         },
                 
@@ -26,7 +28,8 @@ export const products = [
             title: 'Zapatillas Urbanas Hombre New Balance 9060 Morada', 
             price: '80.990',
             stock: 10,
-            sizes: ['42','43','44'] 
+            sizes: ['42','43','44'],
+            category: '<nino'
         },
                 
         { 
@@ -35,7 +38,8 @@ export const products = [
             title: 'Zapatillas Urbanas Hombre New Balance Ml574evb Negro', 
             price: '52,990',
             stock: 10,
-            sizes: ['42','43','44'] 
+            sizes: ['42','43','44'],
+            category: 'adulto' 
     
         },
                 
@@ -45,7 +49,8 @@ export const products = [
             title: 'Zapatillas Nike Air Max 90', 
             price: '130.990',
             stock: 10,
-            sizes: ['42','43','44'] 
+            sizes: ['42','43','44'],
+            category: 'adulto' 
         },
                 
         { 
@@ -54,7 +59,8 @@ export const products = [
             title: 'Zapatillas Forum Low', 
             price: '80.990',
             stock: 10,
-            sizes: ['42','43','44'] 
+            sizes: ['42','43','44'],
+            category: 'nino'   
          
         },
                 
@@ -64,7 +70,8 @@ export const products = [
             title: 'Zapatillas New Balance 550 White Green Men', 
             price: '80.990',
             stock: 10,
-            sizes: ['42','43','44']    
+            sizes: ['42','43','44'],
+            category: 'nino'    
         },
                 
         { 
@@ -73,7 +80,8 @@ export const products = [
             title: 'Zapatillas Nike Full Force Low', 
             price: '74.990' ,
             stock: 10,
-            sizes: ['42','43','44']   
+            sizes: ['42','43','44'],
+            category: 'adulto'   
         },
                
         { 
@@ -82,7 +90,8 @@ export const products = [
             title: 'Zapatillas Nike Air Max Dn', 
             price: '120.990',
             stock: 10,
-            sizes: ['42','43','44']    
+            sizes: ['42','43','44'],
+            category: 'adulto'    
         },
                 
         { 
@@ -91,7 +100,8 @@ export const products = [
             title: 'Zapatillas Adidas Handball Spezial Originals',
              price: '89.990' ,
              stock: 10,
-             sizes: ['42','43','44']   
+             sizes: ['42','43','44'],
+             category: 'adulto'   
         },
         { 
             id: 11, 
@@ -99,7 +109,8 @@ export const products = [
             title: 'Zapatillas Nike Gamma Force', 
             price: '90.990',
             stock: 10,
-            sizes: ['42','43','44']   
+            sizes: ['42','43','44'],
+            category: 'adulto'   
          },
         { 
             id: 12, 
@@ -107,7 +118,8 @@ export const products = [
             title: 'Zapatilla New Balance 725 Unisex Negro', 
             price: '89.990',
             stock: 10,
-            sizes: ['42','43','44']    
+            sizes: ['42','43','44'],
+            category: 'nino'    
         },
         { 
             id: 13, 
@@ -115,7 +127,8 @@ export const products = [
              title: 'Zapatillas Nike Journey Run', 
              price: '79.990' ,
              stock: 10,
-             sizes: ['42','43','44']   
+             sizes: ['42','43','44'],
+             category: 'adulto'   
             },
         { 
             id: 14, 
@@ -123,7 +136,8 @@ export const products = [
             title: 'Adidas Zapatillas Gazelle Chile Originals', 
             price: '59.990',
             stock: 10,
-            sizes: ['42','43','44']   
+            sizes: ['42','43','44'],
+            category: 'adulto'   
         },
         { 
             id: 15, 
@@ -131,7 +145,8 @@ export const products = [
             title: 'Zapatillas Urbanas Unisex New Balance 574 Azul', 
             price: '69.990',
             stock: 10,
-            sizes: ['42','43','44']   
+            sizes: ['42','43','44'],
+            category: 'adulto'   
         
         },
         
@@ -141,7 +156,8 @@ export const products = [
             title: 'NIKE AIR MAX PLUS PRM', 
             price: '99.990',
             stock: 10,
-            sizes: ['42','43','44']   
+            sizes: ['42','43','44'],
+            category: 'nino'   
         },
                 
         { 
@@ -150,7 +166,8 @@ export const products = [
             title: 'Zapatillas Run 60s 3.0 Lifestyle Running', 
             price: '49.990',
             stock: 10,
-            sizes: ['42','43','44']  
+            sizes: ['42','43','44'],
+            category: 'adulto'  
          },
         
         { 
@@ -159,7 +176,8 @@ export const products = [
             title: 'Zapatillas Urbanas Hombre New Balance 500 Verde', 
             price: '45.990' ,
             stock: 10,
-            sizes: ['42','43','44']  
+            sizes: ['42','43','44'],
+            category: 'adulto'  
         },
                 
         { 
@@ -168,7 +186,8 @@ export const products = [
             title: 'Nike Court Vision Mid Next Nature', 
             price: '83.990',
             stock: 10,
-            sizes: ['42','43','44']  
+            sizes: ['42','43','44'],
+            category: 'adulto'  
         },
                 
         { 
@@ -177,7 +196,8 @@ export const products = [
             title: 'Zapatillas adidas Grand Court 2.0', 
             price: '42.990',
             stock: 10,
-            sizes: ['42','43','44']   
+            sizes: ['42','43','44'],
+            category: 'nino'   
         },
         
         { 
@@ -186,7 +206,8 @@ export const products = [
             title: 'Nike Air Max SC', 
             price: '77.990',
             stock: 10,
-            sizes: ['42','43','44']   
+            sizes: ['42','43','44'],
+            category: 'adulto'   
         },
         
         { 
@@ -195,7 +216,8 @@ export const products = [
             title: 'Zapatillas Fútbol Hombre New Balance 442 V2 Negra', 
             price: '59.990',
             stock: 10,
-            sizes: ['42','43','44']   
+            sizes: ['42','43','44'],
+            category: 'adulto'   
         },
                 
         { 
@@ -204,7 +226,8 @@ export const products = [
             title: 'Zapatillas Nike Air Max 97 Se Iron Grey', 
             price: '109.990',
             stock: 10,
-            sizes: ['42','43','44']   
+            sizes: ['42','43','44'],
+            category: 'adulto'   
         },
         
         { 
@@ -212,7 +235,8 @@ export const products = [
             img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/0fd9bc2bfc234ce0b69aaef900fddbdf_9366/Zapatillas_NMD_R1_Negro_HQ4452_01_standard.jpg', title: 'Zapatillas NMD_R1 Negro', 
             price: '68.990', 
             stock: 10,
-            sizes: ['42','43','44']  
+            sizes: ['42','43','44'],
+            category: 'adulto'  
         },
                 
         { 
@@ -221,7 +245,8 @@ export const products = [
             title: 'Zapatilla New Balance 530 Unisex Verde', 
             price: '49.990',
             stock: 10,
-            sizes: ['42','43','44']  
+            sizes: ['42','43','44'],
+            category: 'adulto'  
          },
                 
         { 
@@ -230,7 +255,8 @@ export const products = [
             title: 'Zapatillas Break Start', 
             price: '68.990',
             stock: 10,
-            sizes: ['42','43','44']  
+            sizes: ['42','43','44'],
+            category: 'nino'  
 
         },
                 
@@ -240,7 +266,8 @@ export const products = [
             title: 'Zapatillas Hombre Nike Court Vision Low NN Gris ', 
             price: '99.990',
             stock: 10,
-            sizes: ['42','43','44']  
+            sizes: ['42','43','44'],
+            category: 'nino'   
         },
              
         { 
@@ -249,7 +276,9 @@ export const products = [
             title: 'Zapatilla New Balance 480 L ', 
             price: '67.990',
             stock: 10,
-            sizes: ['42','43','44'] 
+            sizes: ['42','43','44'],
+            category: 'adulto'  
+ 
             
             },
             ];
@@ -270,4 +299,11 @@ export const products = [
                 });
             };
             
-           
+            export const getProductByCategory = (category) => {
+                return new Promise((res) => {
+                    const productosFiltrados = products.filter((product) => product.category === category);
+                    setTimeout(() => {
+                        res(productosFiltrados);
+                    }, 2000);
+                });
+            };
