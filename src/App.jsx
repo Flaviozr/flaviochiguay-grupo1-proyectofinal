@@ -9,7 +9,7 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import ItemList from './components/ItemList/ItemList';
 import CartPage from './components/Cart/Cart';
-
+import Brands from './components/Marcas/Marcas';
 
 function App() {
  return (
@@ -24,6 +24,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/contact' element={<Contact />} />
         <Route path="/cart" element={<CartPage />} /> 
+        <Route path="/marcas" element={<Brands />} /> 
       </Routes>
       <Footer />
       </BrowserRouter>

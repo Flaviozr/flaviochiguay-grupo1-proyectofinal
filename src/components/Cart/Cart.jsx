@@ -1,5 +1,5 @@
 import React from 'react';
-import useStore from '../../Store/Store'; // Asegúrate de que el path sea correcto
+import useStore from '../../Store/Store'; 
 import { Link } from 'react-router-dom';
 
 export default function CartPage() {
