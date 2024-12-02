@@ -23,22 +23,24 @@ export default function Item({ id, title, price, img }) {
     };
 
     return (
-        <div className="relative flex flex-col items-center my-6 mx-4 p-4 bg-gradient-to-r from-gray-100 via-white to-gray-100 rounded-lg shadow-lg transform hover:scale-105 transition duration-300">
+        <div className="relative flex flex-col items-center my-6 mx-4 p-6 bg-white rounded-2xl shadow-2xl hover:scale-105 transform transition-all duration-300 ease-in-out">
             {/* Mensaje de confirmación */}
             {showMessage && (
-                <div className="absolute top-2 left-2 right-2 bg-green-500 text-white text-sm font-semibold py-2 px-4 rounded-md shadow-md">
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-sm font-semibold py-2 px-6 rounded-lg shadow-xl z-10">
                     Producto añadido al carrito ✅
                 </div>
             )}
 
-            <Link to={`/products/${id}`} className="w-full h-64 overflow-hidden rounded-lg mb-4">
+            {/* Imagen del producto */}
+            <Link to={`/products/${id}`} className="w-full h-64 overflow-hidden rounded-lg mb-4 transition-transform duration-500 ease-in-out hover:scale-105">
                 <img
                     src={img}
                     alt={`Imagen de ${title}`}
-                    className="w-full h-full object-cover transition-transform duration-500 ease-in-out hover:scale-110"
+                    className="w-full h-full object-cover rounded-xl shadow-xl transform hover:scale-105 transition-all duration-300 ease-in-out"
                 />
             </Link>
 
+            {/* Título del producto */}
             <Link
                 to={`/products/${id}`}
                 className="text-xl font-semibold text-gray-800 mb-2 tracking-wide hover:text-yellow-500 transition duration-300"
@@ -46,19 +48,21 @@ export default function Item({ id, title, price, img }) {
                 {title}
             </Link>
 
+            {/* Precio del producto */}
             <h4 className="text-lg font-bold text-gray-700 mb-4">${price}</h4>
 
+            {/* Botones de acción */}
             <div className="flex justify-between w-full space-x-4">
                 <Link
                     to={`/products/${id}`}
-                    className="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300"
+                    className="bg-blue-600 text-white py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300 ease-in-out transform hover:scale-105"
                 >
                     Ver Producto
                 </Link>
 
                 <button
                     onClick={handleAddToCart}
-                    className="bg-green-600 text-white py-2 px-6 rounded-full hover:bg-green-700 transition duration-300"
+                    className="bg-green-600 text-white py-2 px-6 rounded-full hover:bg-green-700 transition duration-300 ease-in-out transform hover:scale-105"
                 >
                     Añadir al carrito
                 </button>
@@ -66,4 +70,3 @@ export default function Item({ id, title, price, img }) {
         </div>
     );
 }
-

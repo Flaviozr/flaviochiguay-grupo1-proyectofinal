@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { BiCart } from "react-icons/bi"; 
+import { BiCart } from "react-icons/bi";
 
-const Logo = "https://i.pinimg.com/474x/06/0c/91/060c9122ee9f5ddd780056324f06047b.jpg";
+const Logo =
+  "https://i.pinimg.com/736x/fa/4a/fb/fa4afbc3c818ca960867f33aa9d701dd.jpg"; // Logo urbano
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,70 +21,78 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${
         scrolled
-          ? "bg-gradient-to-r from-gray-700 via-gray-800 to-black shadow-xl"
-          : "bg-gradient-to-r from-gray-600 via-gray-700 to-black"
+          ? "bg-gradient-to-r from-gray-800 via-black to-gray-900 shadow-xl"
+          : "bg-transparent"
       }`}
     >
-      <div className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <div className="hidden md:flex items-center space-x-6">
+      <div className="container mx-auto px-6 py-4 flex justify-between items-center">
+        {/* Menú izquierdo */}
+        <div className="hidden md:flex items-center space-x-10">
           <Link
             to="/"
-            className="text-gray-50 text-lg font-semibold uppercase tracking-wide hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+            className="text-white text-lg font-semibold tracking-wider hover:text-gold transition-all duration-300 transform hover:scale-110"
           >
             Inicio
           </Link>
           <Link
             to="/products"
-            className="text-gray-50 text-lg font-semibold uppercase tracking-wide hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+            className="text-white text-lg font-semibold tracking-wider hover:text-gold transition-all duration-300 transform hover:scale-110"
           >
             Tienda
           </Link>
           <Link
             to="/marcas"
-            className="text-gray-50 text-lg font-semibold uppercase tracking-wide hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+            className="text-white text-lg font-semibold tracking-wider hover:text-gold transition-all duration-300 transform hover:scale-110"
           >
             Marcas
           </Link>
         </div>
 
+        {/* Logo central */}
         <div className="flex items-center justify-center flex-grow text-center">
           <Link to="/" className="flex flex-col items-center">
             <img
               src={Logo}
               alt="Logo"
-              className="h-12 w-auto transform transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-3 hover:opacity-90"
+              className="h-16 w-auto transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-6"
             />
-            <span className="navbar-logo mt-2 text-sm font-semibold transform transition-all duration-300 ease-in-out hover:text-yellow-400 hover:scale-110">
+            <span className="text-white text-2xl font-bold mt-2 transform transition-all duration-300 ease-in-out hover:text-gold hover:scale-105">
               REALKING-STORE
             </span>
           </Link>
         </div>
 
-        <div className="hidden md:flex items-center space-x-6">
+        {/* Menú derecho */}
+        <div className="hidden md:flex items-center space-x-10">
           <Link
             to="/about"
-            className="text-gray-50 text-lg font-semibold uppercase tracking-wide hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+            className="text-white text-lg font-semibold tracking-wider hover:text-gold transition-all duration-300 transform hover:scale-110"
           >
             Nosotros
           </Link>
           <Link
             to="/contact"
-            className="text-gray-50 text-lg font-semibold uppercase tracking-wide hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+            className="text-white text-lg font-semibold tracking-wider hover:text-gold transition-all duration-300 transform hover:scale-110"
           >
             Contacto
           </Link>
+          {/* Botón del carrito */}
           <Link
             to="/cart"
-            className="text-gray-50 text-lg font-semibold uppercase tracking-wide hover:text-yellow-300 transition-all duration-300 transform hover:scale-105 flex items-center space-x-2"
+            className="relative bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl"
           >
-            <BiCart className="icono-carrito w-6 h-6" />
+            <BiCart className="w-7 h-7 text-gray-900" />
+            <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center transform translate-x-2 -translate-y-2 shadow-md">
+              
+            </span>
           </Link>
         </div>
 
+        {/* Menú móvil */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
-            className="text-gray-50 focus:outline-none"
+            className="text-white focus:outline-none"
           >
             <svg
               className="w-8 h-8"
@@ -102,16 +111,18 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* Menú desplegable en móvil */}
       <div
         className={`${
           menuOpen ? "block" : "hidden"
-        } md:hidden bg-gradient-to-r from-gray-700 via-gray-800 to-black text-gray-50 text-lg font-semibold px-6 py-4`}
+        } md:hidden bg-gradient-to-r from-gray-800 via-gray-900 to-black text-white text-lg font-semibold px-6 py-4`}
       >
         <ul className="space-y-4">
           <li>
             <Link
               to="/"
-              className="hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+              className="hover:text-gold transition-all duration-300 transform hover:scale-110"
               onClick={() => setMenuOpen(false)}
             >
               Inicio
@@ -120,7 +131,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/products"
-              className="hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+              className="hover:text-gold transition-all duration-300 transform hover:scale-110"
               onClick={() => setMenuOpen(false)}
             >
               Tienda
@@ -129,7 +140,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/marcas"
-              className="hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+              className="hover:text-gold transition-all duration-300 transform hover:scale-110"
               onClick={() => setMenuOpen(false)}
             >
               Marcas
@@ -138,7 +149,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/about"
-              className="hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+              className="hover:text-gold transition-all duration-300 transform hover:scale-110"
               onClick={() => setMenuOpen(false)}
             >
               Nosotros
@@ -147,7 +158,7 @@ export default function Navbar() {
           <li>
             <Link
               to="/contact"
-              className="hover:text-yellow-300 transition-all duration-300 transform hover:scale-105"
+              className="hover:text-gold transition-all duration-300 transform hover:scale-110"
               onClick={() => setMenuOpen(false)}
             >
               Contacto

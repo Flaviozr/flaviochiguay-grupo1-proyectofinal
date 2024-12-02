@@ -1,117 +1,166 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { getProductById } from '../../data/Zapatilla';
-import useStore from '../../Store/Store';
-import Loading from '../Loading/Loading.jsx';
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { getProductById } from "../../data/Zapatilla";
+import useStore from "../../Store/Store";
+import Loading from "../Loading/Loading.jsx";
 
 export default function ItemDetail() {
-    const { productId } = useParams();
-    const [product, setProduct] = useState({ price: 0, stock: 0 });
-    const [loading, setLoading] = useState(true);
-    const [quantity, setQuantity] = useState(1);
+  const { productId } = useParams();
+  const [product, setProduct] = useState({ price: 0, stock: 0 });
+  const [loading, setLoading] = useState(true);
+  const [quantity, setQuantity] = useState(1);
+  const [showNotification, setShowNotification] = useState(false);
 
-    // Obtener la función addToCart desde el Store
-    const addToCart = useStore((state) => state.addToCart);
+  const addToCart = useStore((state) => state.addToCart);
 
-    useEffect(() => {
-        getProductById(productId).then((data) => {
-            setProduct(data);
-            setLoading(false);
-        });
-    }, [productId]);
+  useEffect(() => {
+    getProductById(productId).then((data) => {
+      setProduct(data);
+      setLoading(false);
+    });
+  }, [productId]);
 
-    const decrementQuantity = () => {
-        if (quantity > 1) {
-            setQuantity(quantity - 1);
-        }
-    };
-
-    const incrementQuantity = () => {
-        if (quantity < product.stock) {
-            setQuantity(quantity + 1);
-        }
-    };
-
-    const handleAddToCart = () => {
-        // Crear un objeto con los datos del producto para agregarlo al carrito
-        const productToAdd = {
-            id: product.id,
-            title: product.title,
-            price: product.price,
-            img: product.img,
-            quantity: quantity,
-        };
-        addToCart(productToAdd); // Agregar al carrito
-    };
-
-    const precioTotal = product.price * quantity;
-
-    if (loading) {
-        return (
-            <div className="container mx-auto max-w-[1170px] mt-20">
-                <Loading />
-            </div>
-        );
+  const decrementQuantity = () => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1);
     }
+  };
 
-    if (!product) {
-        return <div className="mt-20">Producto no encontrado</div>;
+  const incrementQuantity = () => {
+    if (quantity < product.stock) {
+      setQuantity(quantity + 1);
     }
+  };
 
+  const handleAddToCart = () => {
+    const productToAdd = {
+      id: product.id,
+      title: product.title,
+      price: product.price,
+      img: product.img,
+      quantity: quantity,
+    };
+    addToCart(productToAdd);
+
+    // Mostrar notificación temporal
+    setShowNotification(true);
+    setTimeout(() => {
+      setShowNotification(false);
+    }, 3000);
+  };
+
+  const precioTotal = product.price * quantity;
+
+  if (loading) {
     return (
-        <div className="container mx-auto max-w-[1170px] py-16 px-6 mt-20 bg-gradient-to-r from-blue-50 via-white to-blue-100">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                <div className="bg-white shadow-2xl rounded-lg overflow-hidden p-6 transition-transform duration-500 ease-in-out hover:scale-105 transform hover:shadow-xl">
-                    <img src={product.img} alt="Imagen del producto" className="w-full h-auto object-cover rounded-lg" />
-                </div>
-
-                <div className="bg-white shadow-xl rounded-lg p-8 space-y-8">
-                    <h1 className="text-4xl font-bold text-indigo-800 uppercase tracking-wide">{product.title}</h1>
-                    <p className="text-lg text-gray-600 mb-6">{product.description}</p>
-
-                    <div>
-                        <h3 className="text-xl font-semibold text-gray-700 mb-4">Tallas disponibles:</h3>
-                        <ul className="flex space-x-6">
-                            {product.sizes.map((size, index) => (
-                                <li key={index} className="text-gray-700 border-2 border-gray-400 rounded-full w-14 h-14 flex items-center justify-center cursor-pointer hover:bg-indigo-600 hover:text-white transition-all">
-                                    {size}
-                                </li>
-                            ))}
-                        </ul>
-                    </div>
-
-                    <p className="text-lg text-gray-700">
-                        Stock disponible: <span className="font-semibold">{product.stock}</span>
-                    </p>
-
-                    <div className="flex items-center space-x-6 mb-6">
-                        <button onClick={decrementQuantity} className="bg-indigo-500 text-white rounded-full w-14 h-14 flex items-center justify-center text-2xl hover:bg-indigo-600 transition-all transform hover:scale-105 focus:outline-none">
-                            -
-                        </button>
-                        <p className="text-2xl font-semibold">{quantity}</p>
-                        <button onClick={incrementQuantity} className="bg-indigo-500 text-white rounded-full w-14 h-14 flex items-center justify-center text-2xl hover:bg-indigo-600 transition-all transform hover:scale-105 focus:outline-none">
-                            +
-                        </button>
-                    </div>
-
-                    <p className="text-lg text-gray-700">
-                        Precio: <span className="font-semibold">${product.price} por unidad</span>
-                    </p>
-
-                    <p className="text-2xl font-semibold text-gray-800 mt-4">
-                        Total: <span className="text-xl text-green-500">${precioTotal.toFixed(2)}</span>
-                    </p>
-
-                    <div className="flex flex-col space-y-4">
-                        <button onClick={handleAddToCart} className="w-full bg-gradient-to-r from-green-500 to-green-600 text-white text-lg py-4 rounded-lg hover:shadow-2xl hover:bg-gradient-to-l transform transition-all duration-500 mt-6 focus:outline-none">
-                            Añadir al carrito
-                        </button>
-                        <button className="w-full bg-gradient-to-r from-blue-600 to-indigo-500 text-white text-lg py-4 rounded-lg hover:shadow-2xl hover:bg-gradient-to-l transform transition-all duration-500 mt-6 focus:outline-none">
-                            Comprar
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <div className="container mx-auto mt-20 flex justify-center">
+        <Loading />
+      </div>
     );
+  }
+
+  if (!product) {
+    return (
+      <div className="mt-20 text-center text-yellow-500 font-bold text-2xl">
+        Producto no encontrado
+      </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-black text-gray-200 p-8 relative">
+      {showNotification && (
+        <div className="fixed top-5 right-5 bg-yellow-500 text-black font-bold py-3 px-5 rounded-lg shadow-lg transition-all duration-300 transform animate-slide-in-out">
+          ¡Producto añadido al carrito!
+        </div>
+      )}
+      <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16">
+        {/* Imagen del producto */}
+        <div className="relative w-full lg:w-1/2 flex justify-center">
+          <div className="p-6 bg-gradient-to-br from-gray-800 to-gray-900 rounded-xl shadow-2xl hover:shadow-yellow-400 transform transition-all duration-500 hover:scale-105">
+            <img
+              src={product.img}
+              alt={product.title}
+              className="w-full object-cover rounded-lg"
+            />
+            <div className="absolute top-4 right-4 px-3 py-1 bg-yellow-500 text-black text-sm font-bold uppercase rounded-lg">
+              Nuevo
+            </div>
+          </div>
+        </div>
+
+        {/* Información del producto */}
+        <div className="w-full lg:w-1/2 space-y-8 bg-gray-900 p-8 rounded-xl shadow-xl">
+          <h1 className="text-5xl font-extrabold text-yellow-400 uppercase tracking-widest">
+            {product.title}
+          </h1>
+          <p className="text-lg leading-relaxed text-gray-300">
+            {product.description}
+          </p>
+
+          {/* Tallas */}
+          <div>
+            <h3 className="text-xl font-bold text-gray-200 mb-4">
+              Tallas disponibles
+            </h3>
+            <div className="flex space-x-4">
+              {product.sizes.map((size, index) => (
+                <div
+                  key={index}
+                  className="w-12 h-12 flex items-center justify-center bg-gray-800 text-white rounded-full cursor-pointer hover:bg-yellow-400 hover:text-black transition-all"
+                >
+                  {size}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Cantidad */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center space-x-4">
+              <button
+                onClick={decrementQuantity}
+                className="w-10 h-10 flex items-center justify-center bg-gray-700 text-white text-2xl rounded-full hover:bg-yellow-400 hover:text-black transform hover:scale-110 transition-all"
+              >
+                -
+              </button>
+              <p className="text-2xl font-bold">{quantity}</p>
+              <button
+                onClick={incrementQuantity}
+                className="w-10 h-10 flex items-center justify-center bg-gray-700 text-white text-2xl rounded-full hover:bg-yellow-400 hover:text-black transform hover:scale-110 transition-all"
+              >
+                +
+              </button>
+            </div>
+            <p className="text-xl font-semibold text-gray-300">
+              Stock: <span className="text-yellow-400">{product.stock}</span>
+            </p>
+          </div>
+
+          {/* Precio */}
+          <div className="text-right space-y-2">
+            <p className="text-lg">Precio por unidad:</p>
+            <p className="text-3xl font-bold text-yellow-400">${product.price}</p>
+            <p className="text-lg">Total:</p>
+            <p className="text-4xl font-extrabold text-green-500">
+              ${precioTotal.toFixed(2)}
+            </p>
+          </div>
+
+          {/* Botones */}
+          <div className="flex flex-col space-y-4">
+            <button
+              onClick={handleAddToCart}
+              className="w-full bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold text-lg py-3 rounded-lg shadow-md hover:shadow-yellow-500 hover:bg-gradient-to-l transform hover:scale-105 transition-all"
+            >
+              Añadir al carrito
+            </button>
+            <button className="w-full bg-gradient-to-r from-gray-700 to-gray-900 text-white font-bold text-lg py-3 rounded-lg shadow-md hover:shadow-yellow-500 hover:bg-gradient-to-l transform hover:scale-105 transition-all">
+              Comprar ahora
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
 }
