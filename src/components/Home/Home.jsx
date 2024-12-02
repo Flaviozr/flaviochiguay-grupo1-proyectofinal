@@ -113,7 +113,7 @@ export default function Home() {
                     </Link>
 
                     <Link
-                        to="/new-balance"
+                        to="/newbalance"
                         className="group relative overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-xl"
                     >
                         <img

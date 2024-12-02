@@ -12,7 +12,7 @@ import CartPage from './components/Cart/Cart';
 import Brands from './components/Marcas/Marcas';
 import Adidas from './components/Adidas/Adidas';
 import Nike from './components/Nike/Nike';
-
+import Newbalance from './components/Newbalance/Newbalance';
 function App() {
  return (
   <>
@@ -29,6 +29,7 @@ function App() {
         <Route path="/marcas" element={<Brands />} /> 
         <Route path="/adidas" element={<Adidas />} />
         <Route path="/nike" element={<Nike />} />
+        <Route path="/newbalance" element={<Newbalance />} />
 
       </Routes>
       <Footer />
