@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
+import Loading from "../Loading/Loading";  // Asegúrate de tener un componente de loading
 
 export default function Brands() {
+    const [isLoading, setIsLoading] = useState(true);  // Estado para manejar la carga
+
     const brands = [
         {
             name: "New Balance",
@@ -23,15 +26,23 @@ export default function Brands() {
         },
     ];
 
+    // Simulamos que los datos están cargando por 2 segundos
+    useEffect(() => {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);  // Puedes ajustar el tiempo que necesites
+    }, []);
+
+    if (isLoading) {
+        return <Loading />;  // Muestra el componente de carga mientras los datos se cargan
+    }
+
     return (
-        <div className="bg-gradient-to-r from-indigo-900 via-purple-800 to-black min-h-screen pt-32 pb-16"> {/* Aumentamos el padding-top */}
+        <div className="bg-gradient-to-r from-indigo-900 via-purple-800 to-black min-h-screen pt-32 pb-16">
             <div className="container mx-auto px-4">
-                {/* Titulo Principal */}
                 <h1 className="text-7xl font-extrabold text-center text-white mb-16 tracking-wide text-shadow-xl animate__animated animate__fadeIn">
                     Nuestras Marcas Más Destacadas
                 </h1>
-
-                {/* Descripción corta */}
                 <p className="text-center text-xl text-white mb-12 leading-relaxed max-w-3xl mx-auto animate__animated animate__fadeIn">
                     Explora las mejores marcas de calzado y ropa deportiva, cada una con una historia única de innovación, confort y rendimiento. Aquí encontrarás la marca que se adapta perfectamente a tu estilo y necesidades deportivas.
                 </p>
@@ -63,13 +74,12 @@ export default function Brands() {
                     ))}
                 </div>
 
-                {/* Modelos Destacados */}
                 <div className="mt-32">
                     <h2 className="text-6xl font-extrabold text-center text-white mb-12 animate__animated animate__fadeIn">
                         Últimos Modelos De Grandes Marcas
                     </h2>
                     <p className="text-center text-xl text-white mb-12 leading-relaxed max-w-3xl mx-auto animate__animated animate__fadeIn">
-                        En esta sección, encontrarás algunos de los modelos más recientes y populares de las marcas más prestigiosas. Ya sea que busques el máximo confort para tus entrenamientos, o simplemente un estilo que destaque, estos modelos tienen todo lo que necesitas para llevar tu rendimiento y estilo al siguiente nivel.
+                        En esta sección, encontrarás algunos de los modelos más recientes y populares de las marcas más prestigiosas.
                     </p>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
                         <div className="bg-white p-8 rounded-xl shadow-xl transform transition-all hover:scale-105 hover:shadow-lg hover:border-4 border-indigo-600 animate__animated animate__fadeIn">
@@ -80,7 +90,7 @@ export default function Brands() {
                             />
                             <h3 className="text-2xl font-semibold text-gray-800">Nike Air Max 2024</h3>
                             <p className="text-gray-600 mt-2">
-                                Con una nueva tecnología de amortiguación, estos Nike Air Max están diseñados para ofrecer el máximo confort y estilo. Perfectos para tus entrenamientos más exigentes o para un look casual.
+                                Con una nueva tecnología de amortiguación, estos Nike Air Max están diseñados para ofrecer el máximo confort y estilo.
                             </p>
                         </div>
                         <div className="bg-white p-8 rounded-xl shadow-xl transform transition-all hover:scale-105 hover:shadow-lg hover:border-4 border-indigo-600 animate__animated animate__fadeIn">
@@ -91,7 +101,7 @@ export default function Brands() {
                             />
                             <h3 className="text-2xl font-semibold text-gray-800">Adidas Samba OG</h3>
                             <p className="text-gray-600 mt-2">
-                                Un clásico de Adidas que combina estilo retro y confort moderno. Perfecto para el uso diario y para destacar en las calles. Con materiales de alta calidad, estos modelos aseguran una durabilidad excepcional.
+                                Un clásico de Adidas que combina estilo retro y confort moderno.
                             </p>
                         </div>
                         <div className="bg-white p-8 rounded-xl shadow-xl transform transition-all hover:scale-105 hover:shadow-lg hover:border-4 border-indigo-600 animate__animated animate__fadeIn">
@@ -102,7 +112,7 @@ export default function Brands() {
                             />
                             <h3 className="text-2xl font-semibold text-gray-800">New Balance 990v5</h3>
                             <p className="text-gray-600 mt-2">
-                                Con su diseño elegante y tecnología avanzada, las New Balance 990v5 son ideales para quienes buscan lo mejor en rendimiento y comodidad. Son perfectas para quienes se dedican a entrenar a alto nivel, pero también para los que buscan un estilo urbano y casual.
+                                Con su diseño elegante y tecnología avanzada, las New Balance 990v5 son ideales para quienes buscan lo mejor en rendimiento y comodidad.
                             </p>
                         </div>
                     </div>

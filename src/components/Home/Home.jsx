@@ -2,32 +2,45 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
     const banners = [
-        "https://wallpapers.com/images/featured/fondos-de-zapatillas-nln3t3z56a1d7bfe.webp",
-        "https://png.pngtree.com/background/20220726/original/pngtree-sneakers-pattern-fitness-sport-footwear-picture-image_1815139.jpg",
-        "https://wallpapers.com/images/hd/sneakers-zaowzbpbbqmby6cm.jpg",
+        {
+            imgUrl: "https://wallpapers.com/images/hd/new-balance-triple-coloured-shoes-zoo7i8gfvx1wvkkt.jpg",
+            title: "Zapatillas Deportivas",
+            description: "Encuentra las mejores zapatillas deportivas para tu rendimiento."
+        },
+        {
+            imgUrl: "https://images.pexels.com/photos/48262/pexels-photo-48262.jpeg",
+            title: "Moda en Zapatillas",
+            description: "Conoce las últimas tendencias en zapatillas de las marcas más exclusivas."
+        },
+        {
+            imgUrl: "https://images.unsplash.com/photo-1519931127525-6b6a7619a003?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fHw%3D",
+            title: "Colección Exclusiva",
+            description: "Nuestra colección exclusiva te está esperando. ¡No te la pierdas!"
+        }
     ];
-
+    
     return (
         <div className="bg-gradient-to-r from-indigo-900 via-gray-800 to-black min-h-screen pt-36 pb-16">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-24">
-                {banners.map((imgUrl, index) => (
-                    <div key={index} className="relative group overflow-hidden rounded-xl shadow-2xl transform hover:scale-105 transition-all duration-500">
+            {/* Grid de banners */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-24">
+                {banners.map((banner, index) => (
+                    <div key={index} className="relative group overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-all duration-500 hover:shadow-2xl">
                         <img
-                            src={imgUrl}
+                            src={banner.imgUrl}
                             alt={`Banner ${index + 1}`}
                             className="w-full h-96 object-cover transform group-hover:scale-110 transition duration-500"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                             <div className="text-center px-8 py-6">
-                                <h2 className="text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-wider">
-                                    Zapatillas Exclusivas
+                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-wide transform transition-all duration-300">
+                                    {banner.title}
                                 </h2>
-                                <p className="text-lg text-gray-300 mb-6">
-                                    La colección más grande de zapatillas de las mejores marcas: Nike, Adidas, New Balance y mucho más.
+                                <p className="text-lg text-gray-300 mb-6 max-w-md mx-auto">
+                                    {banner.description}
                                 </p>
                                 <Link
                                     to="/products"
-                                    className="text-lg text-white bg-yellow-500 py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-600 hover:shadow-xl transition-all duration-300 ease-in-out"
+                                    className="text-lg text-black bg-yellow-500 py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-600 hover:shadow-xl transform transition-all duration-300 ease-in-out"
                                 >
                                     ¡Explora la Colección!
                                 </Link>
@@ -35,6 +48,7 @@ export default function Home() {
                         </div>
                     </div>
                 ))}
+  
             </div>
             <div className="container mx-auto px-4 mb-24 text-center">
                 <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-16 tracking-wider">
@@ -50,11 +64,11 @@ export default function Home() {
                     <div className="text-center">
                         <h2 className="text-4xl font-extrabold text-white mb-4">Diseño Moderno</h2>
                         <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                            Nuestras zapatillas no solo son funcionales, sino que también cuentan con un diseño de vanguardia que se adapta a tu estilo de vida.
+                        Nuestras zapatillas no solo son funcionales, sino que también cuentan con un diseño de vanguardia que se adapta perfectamente a tu estilo de vida moderno. Cada detalle ha sido cuidadosamente pensado para ofrecer una combinación única de confort, durabilidad y estilo. Ya sea que busques maximizar tu rendimiento deportivo o complementar un look casual, nuestras zapatillas están diseñadas para ser tus compañeras ideales en cada paso del camino. Con una amplia variedad de modelos, colores y tecnologías, Adidas redefine lo que significa caminar con confianza y estilo.
                         </p>
                     </div>
                     <img
-                        src="https://via.placeholder.com/600x400"
+                        src="https://www.backseries.com/wp-content/uploads/lanzamientos-de-sneakers-diciembre-2019-primera-semana.jpg"
                         alt="Diseño moderno"
                         className="rounded-lg shadow-2xl transform hover:scale-105 transition duration-500"
                     />
@@ -67,7 +81,7 @@ export default function Home() {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <Link
-                        to="/marca/adidas"
+                        to="/adidas"
                         className="group relative overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-xl"
                     >
                         <img
@@ -83,7 +97,7 @@ export default function Home() {
                     </Link>
 
                     <Link
-                        to="/marca/nike"
+                        to="/nike"
                         className="group relative overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-xl"
                     >
                         <img
@@ -99,7 +113,7 @@ export default function Home() {
                     </Link>
 
                     <Link
-                        to="/marca/new-balance"
+                        to="/new-balance"
                         className="group relative overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-xl"
                     >
                         <img
@@ -123,7 +137,7 @@ export default function Home() {
 
                     <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
                         <img
-                            src="https://example.com/adidas.jpg"
+                            src="https://images.pexels.com/photos/18188499/pexels-photo-18188499/free-photo-of-adidas-sneakers-on-feet.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
                             alt="Adidas Urban"
                             className="w-full h-48 object-cover rounded-lg mb-4"
                         />
@@ -138,7 +152,7 @@ export default function Home() {
 
                     <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
                         <img
-                            src="https://example.com/nike.jpg"
+                            src="https://images.pexels.com/photos/3116969/pexels-photo-3116969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                             alt="Nike Urban"
                             className="w-full h-48 object-cover rounded-lg mb-4"
                         />
@@ -153,7 +167,7 @@ export default function Home() {
 
                     <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
                         <img
-                            src="https://example.com/newbalance.jpg"
+                            src="https://www.newbalance.com/dw/image/v2/AAGI_PRD/on/demandware.static/-/Library-Sites-NBUS-NBCA/default/dw51ef2d0a/images/page-designer/2024/November/NB883_Comp_E_Image1.jpg?sw=991&sfrm=jpg"
                             alt="New Balance Urban"
                             className="w-full h-48 object-cover rounded-lg mb-4"
                         />

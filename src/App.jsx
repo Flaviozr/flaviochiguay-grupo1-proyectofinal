@@ -10,6 +10,8 @@ import Contact from './components/Contact/Contact';
 import ItemList from './components/ItemList/ItemList';
 import CartPage from './components/Cart/Cart';
 import Brands from './components/Marcas/Marcas';
+import Adidas from './components/Adidas/Adidas';
+import Nike from './components/Nike/Nike';
 
 function App() {
  return (
@@ -25,6 +27,9 @@ function App() {
         <Route path='/contact' element={<Contact />} />
         <Route path="/cart" element={<CartPage />} /> 
         <Route path="/marcas" element={<Brands />} /> 
+        <Route path="/adidas" element={<Adidas />} />
+        <Route path="/nike" element={<Nike />} />
+
       </Routes>
       <Footer />
       </BrowserRouter>

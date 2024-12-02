@@ -68,12 +68,7 @@ export default function ItemDetail() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-gray-200 p-8 relative">
-      {showNotification && (
-        <div className="fixed top-5 right-5 bg-yellow-500 text-black font-bold py-3 px-5 rounded-lg shadow-lg transition-all duration-300 transform animate-slide-in-out">
-          ¡Producto añadido al carrito!
-        </div>
-      )}
+    <div className="min-h-screen pt-20 mt-12 bg-black text-gray-200 p-8 relative">
       <div className="container mx-auto flex flex-col lg:flex-row items-center gap-16">
         {/* Imagen del producto */}
         <div className="relative w-full lg:w-1/2 flex justify-center">
@@ -143,7 +138,7 @@ export default function ItemDetail() {
             <p className="text-3xl font-bold text-yellow-400">${product.price}</p>
             <p className="text-lg">Total:</p>
             <p className="text-4xl font-extrabold text-green-500">
-              ${precioTotal.toFixed(2)}
+              ${precioTotal.toFixed(3)}
             </p>
           </div>
 
@@ -159,8 +154,16 @@ export default function ItemDetail() {
               Comprar ahora
             </button>
           </div>
+
+          {/* Notificación de carrito */}
+          {showNotification && (
+            <div className="mt-4 bg-yellow-500 text-black font-bold py-3 px-5 rounded-lg shadow-lg transition-all duration-300 transform animate-slide-in-out">
+              ¡Producto añadido al carrito!
+            </div>
+          )}
         </div>
       </div>
     </div>
   );
 }
+

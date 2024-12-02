@@ -15,10 +15,11 @@ export default function Product() {
                     y necesidades. Ofrecemos una amplia gama de opciones para cada ocasión, con diseños exclusivos que te harán destacar.
                 </p>
 
-                {/* Lista de Productos */}
-                <div className="bg-white rounded-lg shadow-2xl p-8 transform hover:scale-105 transition-all duration-500">
-                    <ItemList />
-                </div>
+               {/* Lista de Productos */}
+<div className="bg-gray-800 rounded-lg shadow-lg p-8 transform hover:scale-105 transition-all duration-500 hover:shadow-xl hover:shadow-yellow-500/50">
+    <ItemList />
+</div>
+
             </div>
         </section>
     );
