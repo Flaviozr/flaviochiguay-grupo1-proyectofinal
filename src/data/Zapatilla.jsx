@@ -29,7 +29,7 @@ export const products = [
             price: '80.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: '<nino'
+            category: 'nino'
         },
                 
         { 

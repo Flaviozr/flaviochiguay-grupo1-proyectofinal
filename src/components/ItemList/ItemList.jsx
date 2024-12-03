@@ -2,15 +2,14 @@ import Item from "../Item/Item";
 import { getProducts } from "../../data/Zapatilla";
 import { useEffect, useState } from "react";
 import Loading from "../Loading/Loading";
-import Search from "../Search/Search"; // Asegúrate de importar el componente Search
+import Search from "../Search/Search"; 
 
 export default function ItemList({ initialProducts }) {
     const [products, setProducts] = useState(initialProducts || []);
     const [loading, setLoading] = useState(!initialProducts);
-    const [selectedCategory, setSelectedCategory] = useState(''); // Estado para la categoría seleccionada
-    const [searchQuery, setSearchQuery] = useState(''); // Estado para el término de búsqueda
+    const [selectedCategory, setSelectedCategory] = useState(''); 
+    const [searchQuery, setSearchQuery] = useState(''); 
 
-    // Función para manejar el cambio de categoría al hacer clic en un botón
     const handleCategoryClick = (category) => {
         setSelectedCategory(category);
     };
@@ -27,13 +26,12 @@ export default function ItemList({ initialProducts }) {
         }
     }, [initialProducts]);
 
-    // Filtrar productos por la categoría seleccionada
     const filteredProducts = products
         .filter((product) =>
-            product.title.toLowerCase().includes(searchQuery.toLowerCase()) // Filtrar por búsqueda
+            product.title.toLowerCase().includes(searchQuery.toLowerCase()) 
         )
         .filter((product) =>
-            selectedCategory ? product.category === selectedCategory : true // Filtrar por categoría
+            selectedCategory ? product.category === selectedCategory : true 
         );
 
     return (
@@ -44,10 +42,9 @@ export default function ItemList({ initialProducts }) {
                 </div>
             ) : (
                 <div className="container mx-auto max-w-[1200px] p-4">
-                    {/* Componente de búsqueda */}
+
                     <Search setSearchQuery={setSearchQuery} />
 
-                    {/* Botones de categoría */}
                     <div className="mb-4 flex space-x-4">
                         <button
                             onClick={() => handleCategoryClick('')}
@@ -75,7 +72,6 @@ export default function ItemList({ initialProducts }) {
                         </button>
                     </div>
 
-                    {/* Lista de productos */}
                     <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3">
                         {filteredProducts.map((prod) => (
                             <Item {...prod} key={prod.id} />
