@@ -2,11 +2,13 @@ import Item from "../Item/Item";
 import { getProducts } from "../../data/Zapatilla";
 import { useEffect, useState } from "react";
 import Loading from "../Loading/Loading";
+import Search from "../Search/Search"; // Asegúrate de importar el componente Search
 
 export default function ItemList({ initialProducts }) {
     const [products, setProducts] = useState(initialProducts || []);
     const [loading, setLoading] = useState(!initialProducts);
     const [selectedCategory, setSelectedCategory] = useState(''); // Estado para la categoría seleccionada
+    const [searchQuery, setSearchQuery] = useState(''); // Estado para el término de búsqueda
 
     // Función para manejar el cambio de categoría al hacer clic en un botón
     const handleCategoryClick = (category) => {
@@ -26,9 +28,13 @@ export default function ItemList({ initialProducts }) {
     }, [initialProducts]);
 
     // Filtrar productos por la categoría seleccionada
-    const filteredProducts = selectedCategory
-        ? products.filter((product) => product.category === selectedCategory)
-        : products;
+    const filteredProducts = products
+        .filter((product) =>
+            product.title.toLowerCase().includes(searchQuery.toLowerCase()) // Filtrar por búsqueda
+        )
+        .filter((product) =>
+            selectedCategory ? product.category === selectedCategory : true // Filtrar por categoría
+        );
 
     return (
         <>
@@ -38,6 +44,9 @@ export default function ItemList({ initialProducts }) {
                 </div>
             ) : (
                 <div className="container mx-auto max-w-[1200px] p-4">
+                    {/* Componente de búsqueda */}
+                    <Search setSearchQuery={setSearchQuery} />
+
                     {/* Botones de categoría */}
                     <div className="mb-4 flex space-x-4">
                         <button

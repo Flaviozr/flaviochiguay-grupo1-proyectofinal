@@ -21,7 +21,7 @@ export default function Home() {
     
     return (
         <div className="bg-gradient-to-r from-indigo-900 via-gray-800 to-black min-h-screen pt-36 pb-16">
-            {/* Grid de banners */}
+
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-24">
                 {banners.map((banner, index) => (
                     <div key={index} className="relative group overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-all duration-500 hover:shadow-2xl">
@@ -187,7 +187,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
                     <div className="w-full bg-black rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                         <img
-                            src="https://example.com/producto1.jpg"
+                            src="https://images.footlocker.com/content/dam/final/footlockereurope/Online_activations/fl-campaign/2024/2024_01_16_fl_omni_tn_drift_ecom_crm_assets/05_final_output_files/launch/striper-hub/2024_01_16_fl_omni_tn_drift_Phase2_Striperhub_Banner_800x300.jpg"
                             alt="Producto 1"
                             className="w-full h-56 object-cover rounded-t-xl"
                         />
@@ -202,7 +202,7 @@ export default function Home() {
 
                     <div className="w-full bg-black rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                         <img
-                            src="https://example.com/producto2.jpg"
+                            src="https://cdn.sanity.io/images/c1chvb1i/production/222e1d147d9b1faff32544d6e8be3b53b66f8b0c-600x600.jpg?auto=format&fit=max&q=75&w=600"
                             alt="Producto 2"
                             className="w-full h-56 object-cover rounded-t-xl"
                         />
@@ -217,7 +217,7 @@ export default function Home() {
 
                     <div className="w-full bg-black rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                         <img
-                            src="https://example.com/producto3.jpg"
+                            src="https://sportfitbg.com/wp-content/uploads/2024/10/nb-990v4-1982-1-1920x1281-1.jpg"
                             alt="Producto 3"
                             className="w-full h-56 object-cover rounded-t-xl"
                         />
@@ -232,7 +232,7 @@ export default function Home() {
 
                     <div className="w-full bg-black rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                         <img
-                            src="https://example.com/producto4.jpg"
+                            src="https://www.shutterstock.com/image-photo/ivanofrankivsk-ukraine-may-16-2020-600nw-2367802385.jpg"
                             alt="Producto 4"
                             className="w-full h-56 object-cover rounded-t-xl"
                         />
@@ -251,53 +251,64 @@ export default function Home() {
                 <h2 className="text-5xl text-center text-white font-extrabold mb-16">
                     ¡Últimas Tendencias en Zapatillas Urbanas!
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-                    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
-                        <img
-                            src="https://example.com/tendencia1.jpg"
-                            alt="Tendencia 1"
-                            className="w-full h-48 object-cover rounded-lg mb-4"
-                        />
-                        <h2 className="text-4xl font-extrabold text-white mb-4">Sneakers de Alta Moda</h2>
-                        <p className="text-lg text-gray-300 mb-4">
-                            La tendencia más caliente en las calles: sneakers que combinan estilo y comodidad.
-                        </p>
-                        <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
-                            Ver Más
-                        </button>
-                    </div>
+            
 
-                    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
-                        <img
-                            src="https://example.com/tendencia2.jpg"
-                            alt="Tendencia 2"
-                            className="w-full h-48 object-cover rounded-lg mb-4"
-                        />
-                        <h2 className="text-4xl font-extrabold text-white mb-4">Estilo Urbano Vintage</h2>
-                        <p className="text-lg text-gray-300 mb-4">
-                            Combina lo retro con lo moderno. Zapatillas de estilo urbano vintage que nunca pasan de moda.
-                        </p>
-                        <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
-                            Ver Más
-                        </button>
-                    </div>
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
+        <img
+            src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_363,c_limit/73cb1361-b4a5-4616-a48a-96889010f6eb/descubre-los-mejores-estilos-de-calzado-chunky-de-nike.jpg"
+            alt="Tendencia 1"
+            className="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h2 className="text-4xl font-extrabold text-white mb-4">Sneakers de Alta Moda</h2>
+        <p className="text-lg text-gray-300 mb-4">
+            La tendencia más caliente en las calles: sneakers que combinan estilo y comodidad.
+        </p>
+        <Link
+            to="/nike"
+            className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105"
+        >
+            Ver Más
+        </Link>
+    </div>
 
-                    {/* Tendencia 3 */}
-                    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
-                        <img
-                            src="https://example.com/tendencia3.jpg"
-                            alt="Tendencia 3"
-                            className="w-full h-48 object-cover rounded-lg mb-4"
-                        />
-                        <h2 className="text-4xl font-extrabold text-white mb-4">Sneakers con Tecnología</h2>
-                        <p className="text-lg text-gray-300 mb-4">
-                            Zapatillas equipadas con la última tecnología en amortiguación y soporte para el máximo confort.
-                        </p>
-                        <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
-                            Ver Más
-                        </button>
-                    </div>
-                </div>
+    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
+        <img
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhs4FHtpvUHowvqy-YLriqWfTK40fiAWJz-g&s"
+            alt="Tendencia 2"
+            className="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h2 className="text-4xl font-extrabold text-white mb-4">Estilo Urbano Vintage</h2>
+        <p className="text-lg text-gray-300 mb-4">
+            Combina lo retro con lo moderno. Zapatillas de estilo urbano vintage que nunca pasan de moda.
+        </p>
+        <Link
+            to="/adidas"
+            className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105"
+        >
+            Ver Más
+        </Link>
+    </div>
+
+    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
+        <img
+            src="https://images2.minutemediacdn.com/image/upload/c_crop,w_1080,h_607,x_0,y_45/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/kicks/01j9s7g4fmjcbrx5j6dt.jpg"
+            alt="Tendencia 3"
+            className="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h2 className="text-4xl font-extrabold text-white mb-4">Sneakers con Tecnología</h2>
+        <p className="text-lg text-gray-300 mb-4">
+            Zapatillas equipadas con la última tecnología en amortiguación y soporte para el máximo confort.
+        </p>
+        <Link
+            to="/newbalance"
+            className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105"
+        >
+            Ver Más
+        </Link>
+    </div>
+</div>
+
             </div>
         </div>
     );

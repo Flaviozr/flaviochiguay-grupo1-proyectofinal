@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import Loading from "../Loading/Loading"; // Componente de carga
+import Loading from "../Loading/Loading"; 
 
 export default function NewBalanceProducts() {
     const [isLoading, setIsLoading] = useState(true);
 
-    // Simulación de productos de New Balance
     const newBalanceProducts = [
         {
             name: "New Balance 990v5",

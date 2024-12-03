@@ -13,6 +13,8 @@ import Brands from './components/Marcas/Marcas';
 import Adidas from './components/Adidas/Adidas';
 import Nike from './components/Nike/Nike';
 import Newbalance from './components/Newbalance/Newbalance';
+import Search from './components/Search/Search';
+
 function App() {
  return (
   <>
@@ -30,7 +32,7 @@ function App() {
         <Route path="/adidas" element={<Adidas />} />
         <Route path="/nike" element={<Nike />} />
         <Route path="/newbalance" element={<Newbalance />} />
-
+        <Route path="/search" element={<Search />} /> 
       </Routes>
       <Footer />
       </BrowserRouter>

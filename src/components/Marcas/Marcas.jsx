@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
-import Loading from "../Loading/Loading";  // Asegúrate de tener un componente de loading
-
+import Loading from "../Loading/Loading";  
 export default function Brands() {
-    const [isLoading, setIsLoading] = useState(true);  // Estado para manejar la carga
 
+    const [isLoading, setIsLoading] = useState(true);  
     const brands = [
         {
             name: "New Balance",
@@ -26,15 +25,14 @@ export default function Brands() {
         },
     ];
 
-    // Simulamos que los datos están cargando por 2 segundos
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
-        }, 2000);  // Puedes ajustar el tiempo que necesites
+        }, 2000);  
     }, []);
 
     if (isLoading) {
-        return <Loading />;  // Muestra el componente de carga mientras los datos se cargan
+        return <Loading />;  
     }
 
     return (
