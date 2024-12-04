@@ -1,83 +1,140 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Loading from "../Loading/Loading"; // Componente de carga
-
-export default function NikeProducts() {
+import { Link } from 'react-router-dom';
+import Loading from "../Loading/Loading";
+export default function NikePage() {
     const [isLoading, setIsLoading] = useState(true);
 
-    // Simulación de productos de Nike
-    const nikeProducts = [
-        {
-            name: "Nike Air Max 2024",
-            description: "Con una nueva tecnología de amortiguación, estos Nike Air Max están diseñados para ofrecer el máximo confort y estilo.",
-            image: "https://www.elespectador.com/resizer/v2/476MUNYYNFDCNPQJKCDN4DUK6I.jpg?auth=32dcaf42b83a7e661f8584a9b6c5441af83f7264d0512bacbeb677a63b848745&width=920&height=613&smart=true&quality=60",
-            link: "/producto/nike-air-max-2024",
-        },
-        {
-            name: "Nike ZoomX Vaporfly Next%",
-            description: "Los Nike ZoomX Vaporfly Next% están diseñados para corredores de alto rendimiento, proporcionando una sensación ligera y velocidad inigualable.",
-            image: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,cs_srgb/1d704ff6-e0a7-4d26-9e99-020232b130e0/zoomx-vaporfly-next-2-road-racing-zapatillas-nd7Hpd.jpg",
-            link: "/producto/nike-zoomx-vaporfly-next",
-        },
-        {
-            name: "Nike Air Force 1 '07",
-            description: "El clásico que nunca pasa de moda. Los Nike Air Force 1 '07 están diseñados con una silueta limpia y elegante que ofrece comodidad y estilo todo el día.",
-            image: "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,cs_srgb/3e8b7be4-f1f2-4dbd-b3cf-433c2e7d647f/air-force-1-07-zapatillas-pvNkVV.jpg",
-            link: "/producto/nike-air-force-1-07",
-        },
-    ];
+    const nikeInfo = {
+        name: "Nike",
+        description: "Nike no solo es una marca, es un símbolo de innovación. Con sus productos diseñados para llevar el rendimiento deportivo al siguiente nivel, Nike se ha convertido en la elección de los atletas más exigentes. Desde calzado hasta ropa deportiva, Nike es la marca que impulsa los límites de quienes buscan siempre más.",
+        image: "https://i.pinimg.com/736x/49/f8/dd/49f8ddf2b4684a56dc843425815b41dd.jpg",
+        link: "/productos/nike",
+    };
 
-    // Simulamos la carga de datos con un retraso
     useEffect(() => {
         setTimeout(() => {
             setIsLoading(false);
-        }, 2000); // Simula la carga de datos
+        }, 2000);
     }, []);
 
     if (isLoading) {
-        return <Loading />; // Muestra el componente de carga
+        return <Loading />;
     }
 
     return (
-        <div className="bg-gradient-to-r from-black via-gray-800 to-black min-h-screen pt-24 pb-16">
-            <div className="container mx-auto px-4">
-                <h1 className="text-5xl font-extrabold text-center text-white mb-12 tracking-wide text-shadow-xl animate__animated animate__fadeIn">
-                    Productos Nike Más Populares
-                </h1>
-                <p className="text-center text-lg text-white mb-12 leading-relaxed max-w-3xl mx-auto animate__animated animate__fadeIn">
-                    Descubre los mejores productos de Nike, diseñados para el máximo rendimiento y estilo. Encuentra tus favoritos aquí.
-                </p>
-
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                    {nikeProducts.map((product, index) => (
-                        <div
-                            key={index}
-                            className="group bg-white rounded-xl shadow-lg overflow-hidden transition-transform transform hover:scale-105 hover:shadow-2xl"
-                        >
-                            <div className="relative">
-                                <img
-                                    src={product.image}
-                                    alt={product.name}
-                                    className="w-full h-72 object-cover rounded-t-xl group-hover:opacity-80 transition-opacity"
-                                />
-                                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                    <Link
-                                        to={product.link}
-                                        className="text-white text-lg font-semibold uppercase px-6 py-3 rounded-md bg-indigo-600 hover:bg-indigo-700 transition-all"
-                                    >
-                                        Ver Más
-                                    </Link>
-                                </div>
-                            </div>
-
-                            <div className="p-6">
-                                <h2 className="text-xl font-semibold text-gray-800 mb-4">{product.name}</h2>
-                                <p className="text-gray-600 text-lg">{product.description}</p>
-                            </div>
-                        </div>
-                    ))}
+        <div>
+            {/* Sección del video */}
+            <div className="relative w-full h-screen overflow-hidden">
+                <div className="absolute inset-0">
+                    <iframe
+                        src="https://www.youtube.com/embed/o1ud8Z6JTew?autoplay=1&mute=1&loop=1&playlist=o1ud8Z6JTew"
+                        title="New Balance Commercial | Sony A7SIII"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                        className="w-full h-full"
+                    ></iframe>
+                </div>
+                <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-6 bg-black bg-opacity-30">
+                    <h1 className="text-6xl font-bold mb-6 drop-shadow-lg">
+                    Nike - Innovación y Estilo
+                    </h1>
+                    <p className="text-xl mb-8 opacity-90 drop-shadow-lg">
+                    Explora los productos de Nike, la marca que ha revolucionado el mundo del deporte y el estilo. Con tecnología de vanguardia, cada uno de sus productos está diseñado para maximizar tu rendimiento y estilo. 
+                    </p>
+                    <Link
+                        to='/products'
+                        className="bg-blue-600 text-white px-8 py-3 rounded-full text-xl font-bold transform hover:scale-110 hover:bg-blue-700 transition-all"
+                    >
+                        Explorar Productos
+                    </Link>
                 </div>
             </div>
-        </div>
+                {/* Sección de información de Nike */}
+                <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-2xl overflow-hidden transition-all transform hover:scale-105 hover:shadow-lg hover:border-4 border-indigo-600 p-4 animate__animated animate__fadeIn">
+                    <div className="md:w-1/2">
+                        <img
+                            src={nikeInfo.image}
+                            alt={nikeInfo.name}
+                            className="w-full h-80 object-cover rounded-xl shadow-lg transition-opacity opacity-80 hover:opacity-100"
+                        />
+                    </div>
+                    <div className="md:w-1/2 p-10">
+                        <h2 className="text-5xl font-semibold text-gray-900 mb-4 text-gradient">{nikeInfo.name}</h2>
+                        <p className="text-gray-700 text-lg mb-6">{nikeInfo.description}</p>
+                        <Link
+                            to={nikeInfo.link}
+                            className="bg-blue-600 text-white px-8 py-4 rounded-lg text-xl hover:bg-blue-700 transition-all transform hover:scale-110 hover:shadow-xl"
+                        >
+                            Ver más productos
+                        </Link>
+                    </div>
+                </div>
+
+                {/* Sección de Testimonios */}
+                <div className="mt-32 bg-gray-900 p-16 rounded-xl text-white">
+                    <h2 className="text-5xl font-extrabold text-center mb-12">Lo que dicen nuestros clientes</h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                        <div className="bg-gray-800 p-8 rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-lg">
+                            <p className="text-lg mb-4">"Las zapatillas Nike han cambiado mi rendimiento en la cancha. Son cómodas y ofrecen un soporte increíble."</p>
+                            <h4 className="font-bold">Carlos M.</h4>
+                        </div>
+                        <div className="bg-gray-800 p-8 rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-lg">
+                            <p className="text-lg mb-4">"Como corredor, las Nike son mis favoritas. Su tecnología de amortiguación es insuperable."</p>
+                            <h4 className="font-bold">Sofía R.</h4>
+                        </div>
+                        <div className="bg-gray-800 p-8 rounded-lg shadow-xl transform transition-all hover:scale-105 hover:shadow-lg">
+                            <p className="text-lg mb-4">"Nunca había tenido un calzado tan ligero y resistente. Nike siempre me sorprende con la calidad."</p>
+                            <h4 className="font-bold">Luis G.</h4>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Sección de Características destacadas */}
+                <div className="mt-32">
+                    <h2 className="text-5xl font-extrabold text-center text-white mb-12 animate__animated animate__fadeIn">
+                        Características de Nike
+                    </h2>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+                        <div className="bg-white p-8 rounded-xl shadow-xl text-center transform transition-all hover:scale-105 hover:shadow-lg hover:border-4 border-indigo-600">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/0/06/Nike_logo.svg"
+                                alt="Innovación"
+                                className="w-24 mx-auto mb-6"
+                            />
+                            <h3 className="text-2xl font-semibold text-gray-800">Innovación</h3>
+                            <p className="text-gray-600 mt-2">Tecnologías avanzadas que mejoran el rendimiento.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-xl shadow-xl text-center transform transition-all hover:scale-105 hover:shadow-lg hover:border-4 border-indigo-600">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/a/af/Nike_Swoosh_Logo.svg"
+                                alt="Estilo"
+                                className="w-24 mx-auto mb-6"
+                            />
+                            <h3 className="text-2xl font-semibold text-gray-800">Estilo</h3>
+                            <p className="text-gray-600 mt-2">Diseños modernos que se adaptan a todos.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-xl shadow-xl text-center transform transition-all hover:scale-105 hover:shadow-lg hover:border-4 border-indigo-600">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Nike_Spree_Logo_2017.svg"
+                                alt="Confort"
+                                className="w-24 mx-auto mb-6"
+                            />
+                            <h3 className="text-2xl font-semibold text-gray-800">Confort</h3>
+                            <p className="text-gray-600 mt-2">Comodidad excepcional en cada paso.</p>
+                        </div>
+                        <div className="bg-white p-8 rounded-xl shadow-xl text-center transform transition-all hover:scale-105 hover:shadow-lg hover:border-4 border-indigo-600">
+                            <img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/76/Nike_Wordmark.svg"
+                                alt="Durabilidad"
+                                className="w-24 mx-auto mb-6"
+                            />
+                            <h3 className="text-2xl font-semibold text-gray-800">Durabilidad</h3>
+                            <p className="text-gray-600 mt-2">Materiales de alta calidad que duran por años.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
     );
 }
