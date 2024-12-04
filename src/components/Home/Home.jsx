@@ -1,81 +1,113 @@
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
+const banners = [
+    {
+        imgUrl: "https://wallpapers.com/images/hd/new-balance-triple-coloured-shoes-zoo7i8gfvx1wvkkt.jpg",
+        title: "Zapatillas Deportivas",
+        description: "Encuentra las mejores zapatillas deportivas para tu rendimiento."
+    },
+    {
+        imgUrl: "https://images.pexels.com/photos/48262/pexels-photo-48262.jpeg",
+        title: "Moda en Zapatillas",
+        description: "Conoce las últimas tendencias en zapatillas de las marcas más exclusivas."
+    },
+    {
+        imgUrl: "https://images.unsplash.com/photo-1519931127525-6b6a7619a003?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fHw%3D",
+        title: "Colección Exclusiva",
+        description: "Nuestra colección exclusiva te está esperando. ¡No te la pierdas!"
+    }
+];
 
-export default function Home() {
-    const banners = [
-        {
-            imgUrl: "https://wallpapers.com/images/hd/new-balance-triple-coloured-shoes-zoo7i8gfvx1wvkkt.jpg",
-            title: "Zapatillas Deportivas",
-            description: "Encuentra las mejores zapatillas deportivas para tu rendimiento."
-        },
-        {
-            imgUrl: "https://images.pexels.com/photos/48262/pexels-photo-48262.jpeg",
-            title: "Moda en Zapatillas",
-            description: "Conoce las últimas tendencias en zapatillas de las marcas más exclusivas."
-        },
-        {
-            imgUrl: "https://images.unsplash.com/photo-1519931127525-6b6a7619a003?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8MjB8fHxlbnwwfHx8fHw%3D",
-            title: "Colección Exclusiva",
-            description: "Nuestra colección exclusiva te está esperando. ¡No te la pierdas!"
-        }
-    ];
-    
+export default function AutoSlider() {
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setCurrentIndex(prevIndex => (prevIndex + 1) % banners.length);
+        }, 3000); // Cambiar cada 3 segundos
+
+        // Limpiar el intervalo cuando el componente se desmonte
+        return () => clearInterval(intervalId);
+    }, []);
+
+    // Función para ir a la imagen siguiente
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
+    };
+
+    // Función para ir a la imagen anterior
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex - 1 + banners.length) % banners.length);
+    };
+
     return (
         <div className="bg-gradient-to-r from-indigo-900 via-gray-800 to-black min-h-screen pt-36 pb-16">
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-24">
-                {banners.map((banner, index) => (
-                    <div key={index} className="relative group overflow-hidden rounded-xl shadow-lg transform hover:scale-105 transition-all duration-500 hover:shadow-2xl">
-                        <img
-                            src={banner.imgUrl}
-                            alt={`Banner ${index + 1}`}
-                            className="w-full h-96 object-cover transform group-hover:scale-110 transition duration-500"
-                        />
-                        <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                            <div className="text-center px-8 py-6">
-                                <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-wide transform transition-all duration-300">
-                                    {banner.title}
-                                </h2>
-                                <p className="text-lg text-gray-300 mb-6 max-w-md mx-auto">
-                                    {banner.description}
-                                </p>
-                                <Link
-                                    to="/products"
-                                    className="text-lg text-black bg-yellow-500 py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-600 hover:shadow-xl transform transition-all duration-300 ease-in-out"
-                                >
-                                    ¡Explora la Colección!
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                ))}
-  
-            </div>
-            <div className="container mx-auto px-4 mb-24 text-center">
-                <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-16 tracking-wider">
-                    Bienvenido a la Tienda de Zapatillas
-                </h1>
-                <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-16 leading-relaxed">
-                    Encuentra las mejores zapatillas para cualquier ocasión. Desde deportivas hasta casuales, ¡te tenemos cubierto con marcas premium!
-                </p>
-            </div>
-
-            <div className="container mx-auto px-4 mb-24">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div className="text-center">
-                        <h2 className="text-4xl font-extrabold text-white mb-4">Diseño Moderno</h2>
-                        <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                        Nuestras zapatillas no solo son funcionales, sino que también cuentan con un diseño de vanguardia que se adapta perfectamente a tu estilo de vida moderno. Cada detalle ha sido cuidadosamente pensado para ofrecer una combinación única de confort, durabilidad y estilo. Ya sea que busques maximizar tu rendimiento deportivo o complementar un look casual, nuestras zapatillas están diseñadas para ser tus compañeras ideales en cada paso del camino. Con una amplia variedad de modelos, colores y tecnologías, Adidas redefine lo que significa caminar con confianza y estilo.
+            <div className="relative group overflow-hidden rounded-xl shadow-lg">
+                <img
+                    src={banners[currentIndex].imgUrl}
+                    alt={`Banner ${currentIndex + 1}`}
+                    className="w-full h-[500px] object-cover transform transition-all duration-500"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                    <div className="text-center px-8 py-6">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-wide transform transition-all duration-300">
+                            {banners[currentIndex].title}
+                        </h2>
+                        <p className="text-lg text-gray-300 mb-6 max-w-md mx-auto">
+                            {banners[currentIndex].description}
                         </p>
+                        <Link
+                            to="/products"
+                            className="text-lg text-black bg-yellow-500 py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-600 hover:shadow-xl transform transition-all duration-300 ease-in-out"
+                        >
+                            ¡Explora la Colección!
+                        </Link>
                     </div>
-                    <img
-                        src="https://www.backseries.com/wp-content/uploads/lanzamientos-de-sneakers-diciembre-2019-primera-semana.jpg"
-                        alt="Diseño moderno"
-                        className="rounded-lg shadow-2xl transform hover:scale-105 transition duration-500"
-                    />
                 </div>
+                
+                {/* Botones de navegación */}
+                <button
+                    onClick={prevSlide}
+                    className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-black p-2 rounded-full hover:bg-gray-800 transition-all duration-300"
+                >
+                    &lt;
+                </button>
+                <button
+                    onClick={nextSlide}
+                    className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white bg-black p-2 rounded-full hover:bg-gray-800 transition-all duration-300"
+                >
+                    &gt;
+                </button>
             </div>
+            
+            <div className="container mx-auto px-4 mb-36 text-center mt-24">
+    <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-12 tracking-wider">
+        Bienvenido a la Tienda de Zapatillas
+    </h1>
+    <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+        Encuentra las mejores zapatillas para cualquier ocasión. Desde deportivas hasta casuales, ¡te tenemos cubierto con marcas premium!
+    </p>
+</div>
 
+<div className="container mx-auto px-4 mb-36">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="flex flex-col justify-center text-center md:text-left">
+            <h2 className="text-4xl font-extrabold text-white mb-4">
+                Diseño Moderno
+            </h2>
+            <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                Nuestras zapatillas no solo son funcionales, sino que también cuentan con un diseño de vanguardia que se adapta perfectamente a tu estilo de vida moderno. Cada detalle ha sido cuidadosamente pensado para ofrecer una combinación única de confort, durabilidad y estilo. Ya sea que busques maximizar tu rendimiento deportivo o complementar un look casual, nuestras zapatillas están diseñadas para ser tus compañeras ideales en cada paso del camino. Con una amplia variedad de modelos, colores y tecnologías, Adidas redefine lo que significa caminar con confianza y estilo.
+            </p>
+        </div>
+        <div className="flex justify-center items-center">
+            <img
+                src="https://www.backseries.com/wp-content/uploads/lanzamientos-de-sneakers-diciembre-2019-primera-semana.jpg"
+                alt="Diseño moderno"
+                className="rounded-lg shadow-2xl transform hover:scale-105 transition duration-500"
+            />
+        </div>
+    </div>
             <div className="container mx-auto px-4 py-16">
                 <h2 className="text-5xl font-semibold text-center text-white mb-20">
                     Nuestras Marcas
@@ -309,7 +341,7 @@ export default function Home() {
         </Link>
     </div>
 </div>
-
+</div>
             </div>
         </div>
     );
