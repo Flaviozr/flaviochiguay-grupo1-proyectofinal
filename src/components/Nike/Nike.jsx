@@ -23,7 +23,7 @@ export default function NikePage() {
 
     return (
         <div>
-            {/* Sección del video */}
+
             <div className="relative w-full h-screen overflow-hidden">
                 <div className="absolute inset-0">
                     <iframe
@@ -50,7 +50,7 @@ export default function NikePage() {
                     </Link>
                 </div>
             </div>
-                {/* Sección de información de Nike */}
+
                 <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-2xl overflow-hidden transition-all transform hover:scale-105 hover:shadow-lg hover:border-4 border-indigo-600 p-4 animate__animated animate__fadeIn">
                     <div className="md:w-1/2">
                         <img
@@ -71,7 +71,6 @@ export default function NikePage() {
                     </div>
                 </div>
 
-                {/* Sección de Testimonios */}
                 <div className="mt-32 bg-gray-900 p-16 rounded-xl text-white">
                     <h2 className="text-5xl font-extrabold text-center mb-12">Lo que dicen nuestros clientes</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
@@ -90,7 +89,6 @@ export default function NikePage() {
                     </div>
                 </div>
 
-                {/* Sección de Características destacadas */}
                 <div className="mt-32">
                     <h2 className="text-5xl font-extrabold text-center text-white mb-12 animate__animated animate__fadeIn">
                         Características de Nike

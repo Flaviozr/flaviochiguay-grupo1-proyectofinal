@@ -61,7 +61,7 @@ export default function NewBalancePage() {
 
     return (
         <div>
-            {/* Sección del video */}
+
             <div className="relative w-full h-screen overflow-hidden">
                 <div className="absolute inset-0">
                     <iframe
@@ -89,7 +89,6 @@ export default function NewBalancePage() {
                 </div>
             </div>
 
-            {/* Sección de galería */}
             <div className="py-12 bg-gray-100">
                 <h2 className="text-4xl font-bold text-center mb-8">Inspiración New Balance</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-12">
@@ -108,7 +107,6 @@ export default function NewBalancePage() {
                 </div>
             </div>
 
-            {/* Sección de productos destacados */}
             <div className="py-12 bg-white">
                 <h2 className="text-4xl font-bold text-center mb-8">Productos Destacados</h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-12">

@@ -25,18 +25,15 @@ export default function AutoSlider() {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setCurrentIndex(prevIndex => (prevIndex + 1) % banners.length);
-        }, 3000); // Cambiar cada 3 segundos
+        }, 3000);  
 
-        // Limpiar el intervalo cuando el componente se desmonte
         return () => clearInterval(intervalId);
     }, []);
 
-    // Función para ir a la imagen siguiente
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % banners.length);
     };
 
-    // Función para ir a la imagen anterior
     const prevSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex - 1 + banners.length) % banners.length);
     };
@@ -66,7 +63,6 @@ export default function AutoSlider() {
                     </div>
                 </div>
                 
-                {/* Botones de navegación */}
                 <button
                     onClick={prevSlide}
                     className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-black p-2 rounded-full hover:bg-gray-800 transition-all duration-300"
@@ -168,49 +164,55 @@ export default function AutoSlider() {
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-                    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
-                        <img
-                            src="https://images.pexels.com/photos/18188499/pexels-photo-18188499/free-photo-of-adidas-sneakers-on-feet.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                            alt="Adidas Urban"
-                            className="w-full h-48 object-cover rounded-lg mb-4"
-                        />
-                        <h2 className="text-4xl font-extrabold text-white mb-4">Adidas</h2>
-                        <p className="text-lg text-gray-300 mb-4">
-                            Innovación en cada paso. Diseños audaces para un estilo único en las calles.
-                        </p>
-                        <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
-                            Ver Más
-                        </button>
-                    </div>
+    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
+        <img
+            src="https://images.pexels.com/photos/18188499/pexels-photo-18188499/free-photo-of-adidas-sneakers-on-feet.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="Adidas Urban"
+            className="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h2 className="text-4xl font-extrabold text-white mb-4">Adidas</h2>
+        <p className="text-lg text-gray-300 mb-4">
+            Innovación en cada paso. Diseños audaces para un estilo único en las calles.
+        </p>
+        <Link to="/adidas">
+            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+                Ver Más
+            </button>
+        </Link>
+    </div>
 
-                    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
-                        <img
-                            src="https://images.pexels.com/photos/3116969/pexels-photo-3116969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-                            alt="Nike Urban"
-                            className="w-full h-48 object-cover rounded-lg mb-4"
-                        />
-                        <h2 className="text-4xl font-extrabold text-white mb-4">Nike</h2>
-                        <p className="text-lg text-gray-300 mb-4">
-                            El poder del movimiento. Llega lejos con el estilo de Nike, siempre innovando.
-                        </p>
-                        <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
-                            Ver Más
-                        </button>
-                    </div>
+    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
+        <img
+            src="https://images.pexels.com/photos/3116969/pexels-photo-3116969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="Nike Urban"
+            className="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h2 className="text-4xl font-extrabold text-white mb-4">Nike</h2>
+        <p className="text-lg text-gray-300 mb-4">
+            El poder del movimiento. Llega lejos con el estilo de Nike, siempre innovando.
+        </p>
+        <Link to="/nike">
+            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+                Ver Más
+            </button>
+        </Link>
+    </div>
 
-                    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
-                        <img
-                            src="https://www.newbalance.com/dw/image/v2/AAGI_PRD/on/demandware.static/-/Library-Sites-NBUS-NBCA/default/dw51ef2d0a/images/page-designer/2024/November/NB883_Comp_E_Image1.jpg?sw=991&sfrm=jpg"
-                            alt="New Balance Urban"
-                            className="w-full h-48 object-cover rounded-lg mb-4"
-                        />
-                        <h2 className="text-4xl font-extrabold text-white mb-4">New Balance</h2>
-                        <p className="text-lg text-gray-300 mb-4">
-                            La comodidad nunca pasa de moda. Encuentra el equilibrio perfecto entre estilo y confort.
-                        </p>
-                        <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
-                            Ver Más
-                        </button>
+    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
+        <img
+            src="https://www.newbalance.com/dw/image/v2/AAGI_PRD/on/demandware.static/-/Library-Sites-NBUS-NBCA/default/dw51ef2d0a/images/page-designer/2024/November/NB883_Comp_E_Image1.jpg?sw=991&sfrm=jpg"
+            alt="New Balance Urban"
+            className="w-full h-48 object-cover rounded-lg mb-4"
+        />
+        <h2 className="text-4xl font-extrabold text-white mb-4">New Balance</h2>
+        <p className="text-lg text-gray-300 mb-4">
+            La comodidad nunca pasa de moda. Encuentra el equilibrio perfecto entre estilo y confort.
+        </p>
+        <Link to="/newbalance">
+            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+                Ver Más
+            </button>
+        </Link>
                     </div>
                 </div>
             </div>

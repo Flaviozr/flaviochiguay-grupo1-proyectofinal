@@ -35,19 +35,18 @@ export default function Navbar() {
               className="h-16 w-16 rounded-full transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-6 transform"
             />
           </Link>
-          {/* Nombre de la tienda con estilo graffitero */}
+
           <Link
             to="/"
             className="text-4xl font-bold text-white font-sans transform hover:scale-110 hover:text-yellow-400 transition-all duration-300"
             style={{
-              fontFamily: "'Permanent Marker', cursive", // Tipografía estilo graffiti
+              fontFamily: "'Permanent Marker', cursive", 
             }}
           >
             REALKING-STORE
           </Link>
         </div>
 
-        {/* Menú central */}
         <div className="hidden md:flex items-center space-x-10">
           <Link
             to="/"
@@ -69,9 +68,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Menú derecho */}
         <div className="flex items-center space-x-6">
-          {/* Íconos */}
+
           <Link
             to="/user"
             className="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl"
@@ -89,7 +87,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Menú desplegable en móvil */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -100,7 +97,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Menú móvil */}
       {menuOpen && (
         <div className="md:hidden bg-black text-white p-4 space-y-4">
           <Link
