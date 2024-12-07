@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { BiCart, BiUser, BiSearch } from "react-icons/bi"; // Más íconos
 
 const Logo =
-  "https://i.pinimg.com/736x/15/f3/b1/15f3b1dd58c05f61a2f4f1bbe85e9e33.jpg"; // Logo urbano
+  "https://img.freepik.com/vector-premium/logotipo-marca-zapatos-que-llama-ks-deporte-vector-ilustracion-plano-2_764382-209977.jpg"; // Logo urbano
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
