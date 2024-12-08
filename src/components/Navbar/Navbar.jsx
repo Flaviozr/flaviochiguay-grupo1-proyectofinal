@@ -27,7 +27,6 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
 
-        {/* Logo */}
         <div className="flex items-center space-x-4">
           <Link to="/" className="flex items-center">
             <img
@@ -48,7 +47,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Menu Desktop */}
         <div className="hidden md:flex items-center space-x-10">
           <Link
             to="/"
@@ -70,10 +68,8 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Icons */}
         <div className="flex items-center space-x-6">
 
-          {/* Cart Icon with text */}
           <Link
             to="/cart"
             className="relative flex items-center space-x-3 bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl"
@@ -82,7 +78,6 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -93,7 +88,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-black text-white p-4 space-y-4">
           <Link

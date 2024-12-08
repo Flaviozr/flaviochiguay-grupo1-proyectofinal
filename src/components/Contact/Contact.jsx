@@ -1,8 +1,8 @@
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
 export default function Contact() {
     return (
-        <div 
-            className="container mx-auto max-w-[1170px] py-12 px-6 mt-20"
-        >
+        <div className="container mx-auto max-w-[1170px] py-12 px-6 mt-20">
             <div 
                 className="bg-gray-800 bg-opacity-90 p-10 rounded-lg shadow-lg text-white"
                 style={{
@@ -11,9 +11,7 @@ export default function Contact() {
                     backgroundPosition: 'center'
                 }}
             >
-                <h1 className="text-4xl font-bold mb-6 text-center">
-                    Contáctanos
-                </h1>
+                <h1 className="text-4xl font-bold mb-6 text-center">Contáctanos</h1>
 
                 <p className="text-lg text-gray-300 mb-8 text-center">
                     En nuestra tienda, nos importa cada cliente. Si tienes alguna pregunta sobre nuestros productos, pedidos o servicios, no dudes en ponerte en contacto con nosotros. Nuestro equipo está siempre dispuesto a ayudarte.
@@ -66,6 +64,24 @@ export default function Contact() {
                             Enviar Mensaje
                         </button>
                     </form>
+                </div>
+
+                <div className="mt-10 text-center">
+                    <h2 className="text-2xl font-semibold mb-4">Síguenos</h2>
+                    <div className="flex justify-center space-x-6">
+                        <a href="https://www.facebook.com/" className="text-blue-600 hover:text-blue-700 text-3xl">
+                            <FaFacebook />
+                        </a>
+                        <a href="https://twitter.com/" className="text-blue-400 hover:text-blue-500 text-3xl">
+                            <FaTwitter />
+                        </a>
+                        <a href="https://www.instagram.com/" className="text-pink-600 hover:text-pink-700 text-3xl">
+                            <FaInstagram />
+                        </a>
+                        <a href="https://www.linkedin.com/" className="text-blue-800 hover:text-blue-900 text-3xl">
+                            <FaLinkedin />
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

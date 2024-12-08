@@ -1,3 +1,6 @@
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+
+
 export default function Footer() {
     return (
         <footer className="bg-[#171e27] text-white py-10 w-full">
@@ -34,15 +37,23 @@ export default function Footer() {
                     </div>
 
                     {/* Síguenos */}
-                    <div>
-                        <h5 className="text-lg font-semibold mb-4 uppercase">Síguenos</h5>
-                        <div className="flex space-x-4 text-2xl">
-                            <a href="https://www.facebook.com/" className="text-gray-400 hover:text-white"><i className="bi bi-facebook"></i></a>
-                            <a href="https://x.com/?lang=es" className="text-gray-400 hover:text-white"><i className="bi bi-twitter"></i></a>
-                            <a href="https://www.instagram.com/" className="text-gray-400 hover:text-white"><i className="bi bi-instagram"></i></a>
-                            <a href="https://cl.linkedin.com/" className="text-gray-400 hover:text-white"><i className="bi bi-linkedin"></i></a>
-                        </div>
+                    <div className="mt-10 text-center">
+                    <h2 className="text-2xl font-semibold mb-4">Síguenos</h2>
+                    <div className="flex justify-center space-x-6">
+                        <a href="https://www.facebook.com/" className="text-blue-600 hover:text-blue-700 text-3xl">
+                            <FaFacebook />
+                        </a>
+                        <a href="https://twitter.com/" className="text-blue-400 hover:text-blue-500 text-3xl">
+                            <FaTwitter />
+                        </a>
+                        <a href="https://www.instagram.com/" className="text-pink-600 hover:text-pink-700 text-3xl">
+                            <FaInstagram />
+                        </a>
+                        <a href="https://www.linkedin.com/" className="text-blue-800 hover:text-blue-900 text-3xl">
+                            <FaLinkedin />
+                        </a>
                     </div>
+                </div>
                 </div>
 
                 {/* Derechos reservados */}
