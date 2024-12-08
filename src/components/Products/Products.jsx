@@ -2,10 +2,9 @@ import ItemList from "../ItemList/ItemList";
 
 export default function Product() {
     return (
-        <section className="bg-gradient-to-r from-indigo-900 via-gray-800 to-black py-20 mt-20"> {/* Fondo general de la sección */}
+        <section className="bg-gradient-to-r  py-20 mt-20"> 
             <div className="container mx-auto max-w-[1170px] px-6">
 
-                {/* Contenedor con fondo especial para el texto */}
                 <div className="bg-gradient-to-r from-gray-900 via-black to-gray-900 bg-opacity-90 rounded-xl shadow-lg p-8">
                     <h2 className="text-5xl font-extrabold text-center text-white mb-8 tracking-wide leading-tight md:text-6xl">
                         Explora Nuestra Colección de Productos

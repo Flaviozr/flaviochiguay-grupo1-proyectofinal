@@ -250,6 +250,12 @@ export default function AutoSlider() {
                         <div className="p-6 text-center">
                             <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Air Max</h3>
                             <p className="text-lg text-gray-300 mb-4">Comodidad y estilo en cada paso. ¡Hazla tuya ahora!</p>
+                            <Link to="/products/16">
+            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+                Ver Más
+            </button>
+        </Link>
+           
                         </div>
                     </div>
 
@@ -262,6 +268,12 @@ export default function AutoSlider() {
                         <div className="p-6 text-center">
                             <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Ultra Boost</h3>
                             <p className="text-lg text-gray-300 mb-4">Máxima amortiguación para un confort sin igual.</p>
+                            <Link to="/products/24">
+            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+                Ver Más
+            </button>
+        </Link>
+           
                         </div>
                     </div>
 

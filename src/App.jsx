@@ -14,6 +14,7 @@ import Adidas from './components/Adidas/Adidas';
 import Nike from './components/Nike/Nike';
 import Newbalance from './components/Newbalance/Newbalance';
 import Search from './components/Search/Search';
+import Checkout from './components/Checkout/Checkout';
 
 function App() {
  return (
@@ -34,6 +35,8 @@ function App() {
         <Route path="/nike" element={<Nike />} />
         <Route path="/newbalance" element={<Newbalance />} />
         <Route path="/search" element={<Search />} /> 
+        <Route path="/checkout" element={<Checkout />} />
+
       </Routes>
       <Footer />
       </BrowserRouter>
