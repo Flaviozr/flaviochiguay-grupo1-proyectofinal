@@ -76,25 +76,44 @@ export default function AutoSlider() {
                     &gt;
                 </button>
             </div>
-            
-            <div className="container mx-auto px-4 mb-36 text-center mt-24">
-    <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-12 tracking-wider">
-        Bienvenido a la Tienda de Zapatillas
+            <div className="container mx-auto px-4 mb-36 text-center mt-24 bg-gray-900 bg-opacity-90 py-16 rounded-lg shadow-2xl animate-fade-in">
+    <h1 className="text-5xl md:text-6xl font-extrabold text-white mb-12 tracking-wider uppercase leading-tight drop-shadow-lg">
+        Bienvenido a <span className="text-yellow-500">REALKING-STORE</span>
     </h1>
-    <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
-        Encuentra las mejores zapatillas para cualquier ocasión. Desde deportivas hasta casuales, ¡te tenemos cubierto con marcas premium!
+    <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed drop-shadow-md">
+        En <span className="font-extrabold text-yellow-500">REALKING-STORE</span>, nos especializamos en ofrecerte lo <span className="font-extrabold text-yellow-500">MEJOR</span>. 
+        <span className="font-bold text-yellow-500">Zapatillas</span> exclusivas, con estilo <span className="font-bold text-yellow-500">URBANO</span> y <span className="font-bold text-yellow-500">PODEROSO</span>. 
+        Si quieres destacar, este es tu lugar.
+    </p>
+    <p className="text-xl text-white max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-lg">
+        Tenemos lo que necesitas para conquistar las calles: 
+        <span className="font-bold text-yellow-500">Adidas</span>, <span className="font-bold text-yellow-500">Nike</span>, <span className="font-bold text-yellow-500">Jordan</span> y muchas más. 
+        Todo pensado para ti, porque aquí no solo compras, <span className="font-extrabold text-yellow-500">PISAS FUERTE.</span>
+    </p>
+    <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-md">
+        Esto no es solo moda, es <span className="font-bold text-yellow-500">ACTITUD</span>. Con <span className="font-bold text-yellow-500">REALKING-STORE</span>, 
+        no solo te pones zapatillas, te pones <span className="font-bold text-yellow-500">PODER</span>, <span className="font-bold text-yellow-500">ESTILO</span> y <span className="font-bold text-yellow-500">DOMINIO</span>. 
+        ¿Estás listo para ser <span className="font-extrabold text-yellow-500">LEYENDA</span>? <span className="font-extrabold text-yellow-500">¡Únete a nosotros!</span>
     </p>
 </div>
 
-<div className="container mx-auto px-4 mb-36">
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div className="container mx-auto px-4 mb-36 bg-gray-900 bg-opacity-90 py-16 rounded-lg shadow-2xl animate-fade-in">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="flex flex-col justify-center text-center md:text-left">
-            
-            <h2 className="text-4xl font-extrabold text-white mb-4">
+            <h2 className="text-4xl font-extrabold text-white mb-6 tracking-wide uppercase drop-shadow-lg">
                 Diseño Moderno
             </h2>
-            <p className="text-lg text-gray-300 leading-relaxed mb-6">
-                Nuestras zapatillas no solo son funcionales, sino que también cuentan con un diseño de vanguardia que se adapta perfectamente a tu estilo de vida moderno. Cada detalle ha sido cuidadosamente pensado para ofrecer una combinación única de confort, durabilidad y estilo. Ya sea que busques maximizar tu rendimiento deportivo o complementar un look casual, nuestras zapatillas están diseñadas para ser tus compañeras ideales en cada paso del camino. Con una amplia variedad de modelos, colores y tecnologías, Adidas redefine lo que significa caminar con confianza y estilo.
+            <p className="text-lg text-gray-300 leading-relaxed mb-6 max-w-lg mx-auto md:mx-0 drop-shadow-md">
+                En <span className="font-bold text-yellow-500">REALKING-STORE</span>, nuestras zapatillas combinan 
+                <span className="font-extrabold text-yellow-500"> ESTILO</span> y <span className="font-extrabold text-yellow-500">DESEMPEÑO</span> como ninguna otra. 
+                Con un diseño vanguardista, cada par está pensado para quienes buscan 
+                <span className="font-bold text-yellow-500"> IMPACTAR</span> en las calles y rendir al máximo en su día a día.
+            </p>
+            <p className="text-lg text-gray-300 leading-relaxed max-w-lg mx-auto md:mx-0 drop-shadow-md">
+                Con modelos que redefinen el estilo urbano y tecnologías que garantizan 
+                <span className="font-bold text-yellow-500"> CONFORT</span> y <span className="font-bold text-yellow-500">DURABILIDAD</span>, 
+                encontrarás la combinación perfecta entre diseño y funcionalidad. ¡Deja huella con 
+                <span className="font-extrabold text-yellow-500">REAL IMPACT!</span>
             </p>
         </div>
         <div className="flex justify-center items-center">
@@ -105,6 +124,7 @@ export default function AutoSlider() {
             />
         </div>
     </div>
+
             <div className="container mx-auto px-4 py-16">
                 <h2 className="text-5xl font-semibold text-center text-white mb-20">
                     Nuestras Marcas
@@ -230,9 +250,6 @@ export default function AutoSlider() {
                         <div className="p-6 text-center">
                             <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Air Max</h3>
                             <p className="text-lg text-gray-300 mb-4">Comodidad y estilo en cada paso. ¡Hazla tuya ahora!</p>
-                            <button className="bg-pink-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-pink-600 transform transition duration-300">
-                                Ver Producto
-                            </button>
                         </div>
                     </div>
 
@@ -245,9 +262,6 @@ export default function AutoSlider() {
                         <div className="p-6 text-center">
                             <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Ultra Boost</h3>
                             <p className="text-lg text-gray-300 mb-4">Máxima amortiguación para un confort sin igual.</p>
-                            <button className="bg-pink-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-pink-600 transform transition duration-300">
-                                Ver Producto
-                            </button>
                         </div>
                     </div>
 
@@ -260,9 +274,6 @@ export default function AutoSlider() {
                         <div className="p-6 text-center">
                             <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Classic 990</h3>
                             <p className="text-lg text-gray-300 mb-4">Comodidad en cada paso con el estilo clásico de New Balance.</p>
-                            <button className="bg-pink-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-pink-600 transform transition duration-300">
-                                Ver Producto
-                            </button>
                         </div>
                     </div>
 
@@ -275,9 +286,6 @@ export default function AutoSlider() {
                         <div className="p-6 text-center">
                             <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Superstar</h3>
                             <p className="text-lg text-gray-300 mb-4">Un diseño clásico para un look casual y urbano.</p>
-                            <button className="bg-pink-500 text-white font-semibold py-2 px-6 rounded-lg shadow-md hover:bg-pink-600 transform transition duration-300">
-                                Ver Producto
-                            </button>
                         </div>
                     </div>
                 </div>
@@ -287,15 +295,13 @@ export default function AutoSlider() {
                 <h2 className="text-5xl text-center text-white font-extrabold mb-16">
                     ¡Últimas Tendencias en Zapatillas Urbanas!
                 </h2>
-            
-
-<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
-    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
-        <img
-            src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_363,c_limit/73cb1361-b4a5-4616-a48a-96889010f6eb/descubre-los-mejores-estilos-de-calzado-chunky-de-nike.jpg"
-            alt="Tendencia 1"
-            className="w-full h-48 object-cover rounded-lg mb-4"
-        />
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
+                    <img
+                        src="https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_363,c_limit/73cb1361-b4a5-4616-a48a-96889010f6eb/descubre-los-mejores-estilos-de-calzado-chunky-de-nike.jpg"
+                        alt="Tendencia 1"
+                        className="w-full h-48 object-cover rounded-lg mb-4"/>
+                        
         <h2 className="text-4xl font-extrabold text-white mb-4">Sneakers de Alta Moda</h2>
         <p className="text-lg text-gray-300 mb-4">
             La tendencia más caliente en las calles: sneakers que combinan estilo y comodidad.
