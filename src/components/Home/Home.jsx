@@ -39,30 +39,30 @@ export default function AutoSlider() {
     };
 
     return (
-        <div className="bg-gradient-to-r from-indigo-900 via-gray-800 to-black min-h-screen pt-36 pb-16">
-            <div className="relative group overflow-hidden rounded-xl shadow-lg">
-                <img
-                    src={banners[currentIndex].imgUrl}
-                    alt={`Banner ${currentIndex + 1}`}
-                    className="w-full h-[500px] object-cover transform transition-all duration-500"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
-                    <div className="text-center px-8 py-6">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-wide transform transition-all duration-300">
-                            {banners[currentIndex].title}
-                        </h2>
-                        <p className="text-lg text-gray-300 mb-6 max-w-md mx-auto">
-                            {banners[currentIndex].description}
-                        </p>
-                        <Link
-                            to="/products"
-                            className="text-lg text-black bg-yellow-500 py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-600 hover:shadow-xl transform transition-all duration-300 ease-in-out"
-                        >
-                            ¡Explora la Colección!
-                        </Link>
+            <div className="min-h-screen pt-36 pb-16">
+                <div className="relative group overflow-hidden rounded-xl shadow-lg">
+                    <img
+                        src={banners[currentIndex].imgUrl}
+                        alt={`Banner ${currentIndex + 1}`}
+                        className="w-full h-[500px] object-cover transform transition-all duration-500"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                        <div className="text-center px-8 py-6">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-wide transform transition-all duration-300">
+                                {banners[currentIndex].title}
+                            </h2>
+                            <p className="text-lg text-gray-300 mb-6 max-w-md mx-auto">
+                                {banners[currentIndex].description}
+                            </p>
+                            <Link
+                                to="/products"
+                                className="text-lg text-black bg-yellow-500 py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-600 hover:shadow-xl transform transition-all duration-300 ease-in-out"
+                            >
+                                ¡Explora la Colección!
+                            </Link>
+                        </div>
                     </div>
-                </div>
-                
+                        
                 <button
                     onClick={prevSlide}
                     className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-black p-2 rounded-full hover:bg-gray-800 transition-all duration-300"
