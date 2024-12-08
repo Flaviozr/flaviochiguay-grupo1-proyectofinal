@@ -6,8 +6,9 @@ export const products = [
             title: 'Zapatillas adidas VL Court 3.0', 
             price: '60.990',
             stock: 10,
-            sizes: ['42','43','44'],
+            sizes: ['32','34','38'],
             category: 'nino',
+            brands: 'adidas'
         },
         
         {
@@ -17,7 +18,8 @@ export const products = [
              price: '211.990',
              stock: 10,
              sizes: ['42','43','44'],
-             category: 'adulto' 
+             category: 'adulto',
+             brands: 'nike'
             
         },
                 
@@ -29,17 +31,19 @@ export const products = [
             price: '80.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'nino'
+            category: 'nino',
+            brands: 'newbalance'
         },
                 
         { 
             id: 4, 
             img: 'https://www.dimarsa.cl/media/catalog/product/m/a/marcasnewbalanceml574evb-negro1jpeg_0_10.jpg', 
             title: 'Zapatillas Urbanas Hombre New Balance Ml574evb Negro', 
-            price: '52,990',
+            price: '52.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto' 
+            category: 'adulto',
+            brands: 'newbalance' 
     
         },
                 
@@ -50,17 +54,19 @@ export const products = [
             price: '130.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto' 
+            category: 'adulto',
+            brands: 'nike' 
         },
                 
         { 
             id: 6, 
             img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b7beee7c32d4438aaba3acb6001c2e7b_9366/Zapatillas_Forum_Low_Blanco_FY7757_01_standard.jpg', 
-            title: 'Zapatillas Forum Low', 
+            title: 'Zapatillas Adidas Forum Low', 
             price: '80.990',
             stock: 10,
-            sizes: ['42','43','44'],
-            category: 'nino'   
+            sizes: ['32','34','36'],
+            category: 'nino',
+            brands: 'adidas'  
          
         },
                 
@@ -70,8 +76,9 @@ export const products = [
             title: 'Zapatillas New Balance 550 White Green Men', 
             price: '80.990',
             stock: 10,
-            sizes: ['42','43','44'],
-            category: 'nino'    
+            sizes: ['34,5','36','38'],
+            category: 'nino',
+            brands: 'newbalance'    
         },
                 
         { 
@@ -81,7 +88,8 @@ export const products = [
             price: '74.990' ,
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'   
+            category: 'adulto',
+            brands: 'nike'   
         },
                
         { 
@@ -91,7 +99,8 @@ export const products = [
             price: '120.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'    
+            category: 'adulto',
+            brands: 'nike'    
         },
                 
         { 
@@ -101,7 +110,8 @@ export const products = [
              price: '89.990' ,
              stock: 10,
              sizes: ['42','43','44'],
-             category: 'adulto'   
+             category: 'adulto',
+             brands: 'adidas'   
         },
         { 
             id: 11, 
@@ -110,7 +120,8 @@ export const products = [
             price: '90.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'   
+            category: 'adulto',
+            brands: 'nike'   
          },
         { 
             id: 12, 
@@ -118,8 +129,9 @@ export const products = [
             title: 'Zapatilla New Balance 725 Unisex Negro', 
             price: '89.990',
             stock: 10,
-            sizes: ['42','43','44'],
-            category: 'nino'    
+            sizes: ['34','36','38'],
+            category: 'nino',
+            brands: 'newbalance'   
         },
         { 
             id: 13, 
@@ -128,7 +140,8 @@ export const products = [
              price: '79.990' ,
              stock: 10,
              sizes: ['42','43','44'],
-             category: 'adulto'   
+             category: 'adulto',
+             brands: 'nike'   
             },
         { 
             id: 14, 
@@ -137,16 +150,18 @@ export const products = [
             price: '59.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'   
+            category: 'adulto' ,
+            brands: 'adidas'  
         },
         { 
             id: 15, 
             img: 'https://newbalance.cl/media/catalog/product/z/a/zapatillas-urbanas-hombre-new-balance-574-azul-lateral-derecha_1.png?quality=80&bg-color=255,255,255&fit=bounds&height=650&width=650&canvas=650:650',
             title: 'Zapatillas Urbanas Unisex New Balance 574 Azul', 
             price: '69.990',
-            stock: 10,
+            stock: 8,
             sizes: ['42','43','44'],
-            category: 'adulto'   
+            category: 'adulto' ,
+            brands: 'newbalance'  
         
         },
         
@@ -155,19 +170,21 @@ export const products = [
             img: 'https://nikeclprod.vtexassets.com/arquivos/ids/1068679/FQ7331_001_A_PREM.jpg?v=638570091449770000', 
             title: 'NIKE AIR MAX PLUS PRM', 
             price: '99.990',
-            stock: 10,
-            sizes: ['42','43','44'],
-            category: 'nino'   
+            stock: 13,
+            sizes: ['36','38'],
+            category: 'nino'  ,
+            brands: 'nike' 
         },
                 
         { 
             id: 17, 
             img: 'https://assets.adidas.com/images/w_600,f_auto,q_auto/0c9c0b42799940cd9f49af4600107164_9366/Zapatillas_Run_60s_3.0_Lifestyle_Running_Negro_HP2258_01_standard.jpg', 
-            title: 'Zapatillas Run 60s 3.0 Lifestyle Running', 
+            title: 'Zapatillas Adidas Run 60s 3.0 Lifestyle Running', 
             price: '49.990',
-            stock: 10,
+            stock: 3,
             sizes: ['42','43','44'],
-            category: 'adulto'  
+            category: 'adulto',
+            brands: 'adidas'
          },
         
         { 
@@ -177,7 +194,8 @@ export const products = [
             price: '45.990' ,
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'  
+            category: 'adulto',
+            brands: 'newbalance'
         },
                 
         { 
@@ -187,7 +205,8 @@ export const products = [
             price: '83.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'  
+            category: 'adulto',
+            brands: 'nike' 
         },
                 
         { 
@@ -197,7 +216,8 @@ export const products = [
             price: '42.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'nino'   
+            category: 'nino'  ,
+            brands: 'newbalance', 
         },
         
         { 
@@ -207,7 +227,8 @@ export const products = [
             price: '77.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'   
+            category: 'adulto',
+            brands: 'newbalance',   
         },
         
         { 
@@ -217,7 +238,8 @@ export const products = [
             price: '59.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'   
+            category: 'adulto',
+            brands: 'newbalance',   
         },
                 
         { 
@@ -227,7 +249,8 @@ export const products = [
             price: '109.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'   
+            category: 'adulto',
+            brands: 'newbalance',   
         },
         
         { 
@@ -236,7 +259,8 @@ export const products = [
             price: '68.990', 
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'  
+            category: 'adulto',
+            brands: 'newbalance',  
         },
                 
         { 
@@ -246,7 +270,8 @@ export const products = [
             price: '49.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'  
+            category: 'adulto',
+            brands: 'newbalance',  
          },
                 
         { 
@@ -256,7 +281,8 @@ export const products = [
             price: '68.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'nino'  
+            category: 'nino',
+            brands: 'newbalance',  
 
         },
                 
@@ -267,7 +293,8 @@ export const products = [
             price: '99.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'nino'   
+            category: 'nino',
+            brands: 'newbalance',   
         },
              
         { 
@@ -277,7 +304,8 @@ export const products = [
             price: '67.990',
             stock: 10,
             sizes: ['42','43','44'],
-            category: 'adulto'  
+            category: 'adulto',
+            brands: 'newbalance', 
  
             
             },

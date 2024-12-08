@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from 'react-router-dom';
 import Loading from "../Loading/Loading";  
+
 export default function Brands() {
 
     const [isLoading, setIsLoading] = useState(true);  
@@ -9,19 +10,19 @@ export default function Brands() {
             name: "New Balance",
             description: "New Balance es una marca pionera en ofrecer calzado y ropa deportiva que combina confort, estilo y rendimiento. Fundada en 1906, ha liderado la industria deportiva con su innovadora tecnología de amortiguación, ofreciendo productos ideales para quienes buscan la perfección en sus entrenamientos y en su día a día.",
             image: "https://cdn.sanity.io/images/c1chvb1i/production/43a4253bb9b31b32cf91fa59f90a691c1603a7ab-1100x735.jpg",
-            link: "/productos/new-balance",
+            link: "/newbalance",
         },
         {
             name: "Adidas",
             description: "Con más de 70 años de historia, Adidas es una marca global que ha revolucionado la industria deportiva con sus productos innovadores. Famosa por sus tres rayas, Adidas combina diseño moderno y tecnología de alto rendimiento, siendo la opción preferida de atletas y aficionados de todos los deportes.",
             image: "https://wallpaper.dog/large/1678.jpg",
-            link: "/productos/adidas",
+            link: "/adidas",
         },
         {
             name: "Nike",
             description: "Nike no solo es una marca, es un símbolo de innovación. Con sus productos diseñados para llevar el rendimiento deportivo al siguiente nivel, Nike se ha convertido en la elección de los atletas más exigentes. Desde calzado hasta ropa deportiva, Nike es la marca que impulsa los límites de quienes buscan siempre más.",
             image: "https://i.pinimg.com/736x/49/f8/dd/49f8ddf2b4684a56dc843425815b41dd.jpg",
-            link: "/productos/nike",
+            link: "/nike",
         },
     ];
 

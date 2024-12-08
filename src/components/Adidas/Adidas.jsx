@@ -10,7 +10,7 @@ export default function AdidasPage() {
         description:
             "Adidas es una de las marcas más icónicas en el mundo del deporte. Con su enfoque en la sostenibilidad y la innovación, Adidas ha creado productos diseñados para rendir al más alto nivel. Desde calzado hasta ropa, la marca alemana se dedica a inspirar a atletas y personas activas alrededor del mundo.",
         image: "https://upload.wikimedia.org/wikipedia/commons/a/a7/Adidas_Logo.svg",
-        link: "/productos/adidas",
+        link: "/products",
     };
 
     useEffect(() => {

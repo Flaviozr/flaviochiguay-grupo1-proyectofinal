@@ -5,9 +5,7 @@ export default function Footer() {
     return (
         <footer className="bg-[#171e27] text-white py-10 w-full">
             <div className="container mx-auto px-6">
-                {/* Grid principal */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    {/* Acerca de Nosotros */}
                     <div>
                         <h5 className="text-lg font-semibold mb-4 uppercase">Acerca de Nosotros</h5>
                         <p className="text-gray-400">
@@ -15,7 +13,6 @@ export default function Footer() {
                         </p>
                     </div>
                     
-                    {/* Enlaces Rápidos */}
                     <div>
                         <h5 className="text-lg font-semibold mb-4 uppercase">Enlaces Rápidos</h5>
                         <ul className="space-y-2">
@@ -26,7 +23,6 @@ export default function Footer() {
                         </ul>
                     </div>
 
-                    {/* Contacto */}
                     <div>
                         <h5 className="text-lg font-semibold mb-4 uppercase">Contacto</h5>
                         <p className="text-gray-400">
@@ -36,7 +32,6 @@ export default function Footer() {
                         <p className="text-gray-400">Dirección: CALLE BLANCO 123, CASTRO, CHILE</p>
                     </div>
 
-                    {/* Síguenos */}
                     <div className="mt-10 text-center">
                     <h2 className="text-2xl font-semibold mb-4">Síguenos</h2>
                     <div className="flex justify-center space-x-6">
@@ -56,9 +51,8 @@ export default function Footer() {
                 </div>
                 </div>
 
-                {/* Derechos reservados */}
                 <div className="text-center mt-10 text-gray-400">
-                    <p>&copy; 2024 Tu Empresa. Todos los derechos reservados.</p>
+                    <p>&copy; 2024 REALKING.STORE Todos los derechos reservados.</p>
                 </div>
             </div>
         </footer>

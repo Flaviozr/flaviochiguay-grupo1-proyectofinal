@@ -10,7 +10,7 @@ export default function NewBalancePage() {
         description:
             "Desde sus inicios, New Balance ha combinado la innovación con el estilo. Con una misión clara: ofrecer productos que mejoren el rendimiento deportivo sin sacrificar la comodidad ni la calidad.",
         image: "https://upload.wikimedia.org/wikipedia/commons/2/2c/New_Balance_logo.svg",
-        link: "/productos/newbalance",
+        link: "/products",
     };
 
     const galleryImages = [
