@@ -4,7 +4,6 @@ export default function About() {
             <div 
                 className="bg-gray-800 bg-opacity-90 p-10 rounded-lg shadow-lg text-white"
                 style={{
-                    backgroundImage: 'url("https://your-background-image-url.jpg")',
                     backgroundSize: 'cover',
                     backgroundPosition: 'center'
                 }}

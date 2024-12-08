@@ -47,9 +47,9 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('https://images4.alphacoders.com/134/thumb-1920-1340356.jpeg');
-  background-size: cover; /* Asegura que la imagen cubra todo el fondo */
-  background-position: center; /* Centra la imagen */
-  background-repeat: no-repeat; /* Evita que la imagen se repita */
-  background-attachment: fixed; /* Hace que el fondo se quede fijo al hacer scroll */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
   color: #fff;
 }

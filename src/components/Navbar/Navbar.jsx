@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { BiCart, BiUser, BiSearch } from "react-icons/bi"; // Más íconos
+import { BiCart, BiUser, BiSearch } from "react-icons/bi"; 
 
 const Logo =
-  "https://img.freepik.com/vector-premium/logotipo-marca-zapatos-que-llama-ks-deporte-vector-ilustracion-plano-2_764382-209977.jpg"; // Logo urbano
+  "https://img.freepik.com/vector-premium/logotipo-marca-zapatos-que-llama-ks-deporte-vector-ilustracion-plano-2_764382-209977.jpg"; 
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +26,7 @@ export default function Navbar() {
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
-        {/* Logo y nombre de la tienda */}
+
         <div className="flex items-center space-x-4">
           <Link to="/" className="flex items-center">
             <img

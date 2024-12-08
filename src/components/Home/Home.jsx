@@ -89,6 +89,7 @@ export default function AutoSlider() {
 <div className="container mx-auto px-4 mb-36">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
         <div className="flex flex-col justify-center text-center md:text-left">
+            
             <h2 className="text-4xl font-extrabold text-white mb-4">
                 Diseño Moderno
             </h2>
