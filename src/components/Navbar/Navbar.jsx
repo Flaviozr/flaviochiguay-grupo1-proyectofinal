@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { BiCart, BiUser, BiSearch } from "react-icons/bi"; 
+import { BiCart } from "react-icons/bi";
 
 const Logo =
-  "https://img.freepik.com/vector-premium/logotipo-marca-zapatos-que-llama-ks-deporte-vector-ilustracion-plano-2_764382-209977.jpg"; 
+  "https://img.freepik.com/vector-premium/logotipo-marca-zapatos-que-llama-ks-deporte-vector-ilustracion-plano-2_764382-209977.jpg";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,18 +21,19 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 w-full z-50 transition-all duration-300 ease-in-out ${
         scrolled
-          ? "bg-gradient-to-r from-black via-gray-900 to-gray-800 shadow-2xl"
+          ? "bg-gradient-to-r from-black via-gray-900 to-gray-800 shadow-lg"
           : "bg-gradient-to-r from-gray-800 via-black to-gray-900"
       }`}
     >
       <div className="container mx-auto px-6 py-4 flex justify-between items-center">
 
+        {/* Logo */}
         <div className="flex items-center space-x-4">
           <Link to="/" className="flex items-center">
             <img
               src={Logo}
               alt="Logo"
-              className="h-16 w-16 rounded-full transition-transform duration-300 ease-in-out hover:scale-110 hover:rotate-6 transform"
+              className="h-16 w-16 rounded-full transition-all duration-300 ease-in-out hover:scale-125 hover:rotate-6"
             />
           </Link>
 
@@ -47,6 +48,7 @@ export default function Navbar() {
           </Link>
         </div>
 
+        {/* Menu Desktop */}
         <div className="hidden md:flex items-center space-x-10">
           <Link
             to="/"
@@ -68,25 +70,19 @@ export default function Navbar() {
           </Link>
         </div>
 
+        {/* Icons */}
         <div className="flex items-center space-x-6">
 
-          <Link
-            to="/user"
-            className="bg-gradient-to-br from-gray-800 via-gray-700 to-gray-600 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl"
-          >
-            <BiUser className="w-6 h-6 text-white" />
-          </Link>
+          {/* Cart Icon with text */}
           <Link
             to="/cart"
-            className="relative bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl"
+            className="relative flex items-center space-x-3 bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl"
           >
             <BiCart className="w-7 h-7 text-gray-900" />
-            <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold w-5 h-5 rounded-full flex items-center justify-center transform translate-x-2 -translate-y-2 shadow-md">
-              3
-            </span>
           </Link>
         </div>
 
+        {/* Mobile Menu Button */}
         <div className="md:hidden flex items-center">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -97,6 +93,7 @@ export default function Navbar() {
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden bg-black text-white p-4 space-y-4">
           <Link
