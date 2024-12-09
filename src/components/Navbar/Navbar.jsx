@@ -35,10 +35,9 @@ export default function Navbar() {
               className="h-16 w-16 rounded-full transition-all duration-300 ease-in-out hover:scale-125 hover:rotate-6"
             />
           </Link>
-
           <Link
             to="/"
-            className="text-4xl font-bold text-white font-sans transform hover:scale-110 hover:text-yellow-400 transition-all duration-300"
+            className="text-base sm:text-2xl lg:text-4xl font-bold text-white font-sans transform hover:scale-110 hover:text-yellow-400 transition-all duration-300"
             style={{
               fontFamily: "'Permanent Marker', cursive", 
             }}
@@ -69,7 +68,6 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center space-x-6">
-
           <Link
             to="/cart"
             className="relative flex items-center space-x-3 bg-gradient-to-br from-yellow-500 via-yellow-600 to-yellow-700 p-3 rounded-full shadow-lg transform transition-all duration-300 hover:scale-110 hover:shadow-2xl"

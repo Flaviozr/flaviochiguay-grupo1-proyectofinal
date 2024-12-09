@@ -132,28 +132,70 @@ export default function AdidasPage() {
                 </div>
             </section>
 
-            <section className="py-16 bg-gray-900">
-                <h2 className="text-center text-4xl font-extrabold text-gray-100 mb-10">
-                    Galería de Inspiración
-                </h2>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-                    {galleryImages.map((image, index) => (
-                        <div
-                            key={index}
-                            className="relative group overflow-hidden rounded-lg shadow-lg hover:shadow-2xl transition-shadow"
-                        >
-                            <img
-                                src={image}
-                                alt={`Adidas Gallery ${index + 1}`}
-                                className="w-full h-48 object-cover transition-transform group-hover:scale-105"
-                            />
-                            <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                                <p className="text-white font-bold text-lg">Ver Detalles</p>
-                            </div>
-                        </div>
-                    ))}
+            <div className="mt-32 px-8 text-center">
+    <h2 className="text-5xl font-extrabold text-white mb-16">Características clave de Adidas</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mx-4">
+        {[
+            {
+                title: "Durabilidad",
+                description: "Materiales resistentes y de alta calidad que aseguran una larga vida útil.",
+                imgSrc:"https://media.fashionnetwork.com/cdn-cgi/image/format=auto/m/a266/06db/5ced/83ef/33d4/7f3c/060b/564a/7c6a/2188/2188.png",
+                 
+            },
+            {
+                title: "Tecnología",
+                description: "Innovaciones como Boost y Primeknit para una experiencia más cómoda y dinámica.",
+                imgSrc: "https://hips.hearstapps.com/hmg-prod/images/fw24-ub5-deconstructed-shoe-6695478bc774e.jpg?resize=980:*",
+            },
+            {
+                title: "Estilo",
+                description: "Diseños modernos y atrevidos que se adaptan a cualquier estilo personal.",
+                imgSrc: "https://static.euronews.com/articles/stories/08/59/05/26/808x608_cmsv2_75aa317e-1504-50c0-8d93-325ce11ece0e-8590526.jpg",
+            },
+            {
+                title: "Confort",
+                description: "Tecnologías de amortiguación que brindan comodidad durante todo el día.",
+                imgSrc: "https://blog.footdistrict.com/wp-content/uploads/2023/10/16_9-blog-ppal-adidas-original-1-scaled.jpg",
+            },
+        ].map((item, index) => (
+            <div
+                key={index}
+                className="relative bg-white rounded-xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600 overflow-hidden"
+                style={{ width: "300px", height: "450px", margin: "auto" }}
+            >
+                <div className="relative h-full">
+                    <img
+                        src={item.imgSrc}
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+                        <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
+                        <p className="text-sm text-gray-200 px-4">{item.description}</p>
+                    </div>
                 </div>
-            </section>
+            </div>
+        ))}
+    </div>
+</div>
+
+            <div className="py-12 bg-blue-600 text-white text-center">
+                <h2 className="text-4xl font-bold mb-6">Suscríbete para Más</h2>
+                <p className="text-lg mb-6">Recibe ofertas exclusivas y las últimas novedades directamente en tu correo.</p>
+                <form className="flex justify-center">
+                    <input
+                        type="email"
+                        placeholder="Tu correo electrónico"
+                        className="px-4 py-2 rounded-l-lg focus:outline-none text-black"
+                    />
+                    <button
+                        type="submit"
+                        className="bg-white text-blue-600 px-6 py-2 rounded-r-lg font-bold hover:bg-gray-200 transition-all"
+                    >
+                        Suscribirme
+                    </button>
+                </form>
+            </div>
         </div>
     );
 }

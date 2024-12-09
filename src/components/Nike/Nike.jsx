@@ -50,8 +50,6 @@ export default function NikePage() {
                     </Link>
                 </div>
             </div>
-
-            {/* Información de Nike */}
             <div className="flex flex-col md:flex-row items-center bg-white rounded-xl shadow-xl overflow-hidden transition-all transform hover:scale-105 hover:shadow-lg hover:border-4 border-indigo-600 p-8 animate__animated animate__fadeIn mt-16 mx-8">
                 <div className="md:w-1/2">
                     <img
@@ -72,7 +70,7 @@ export default function NikePage() {
                 </div>
             </div>
 
-            <div className="mt-32 text-white text-center">
+      <div className="mt-32 text-white text-center">
       <h2 className="text-5xl font-extrabold mb-12">Lo más destacado de Nike</h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mx-4">
         <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
@@ -135,8 +133,7 @@ export default function NikePage() {
       </div>
     </div>
 
-            {/* Características de Nike */}
-            <div className="mt-32 px-8 text-center">
+    <div className="mt-32 px-8 text-center">
     <h2 className="text-5xl font-extrabold text-white mb-16">Características clave de Nike</h2>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mx-4">
         {[
@@ -164,9 +161,7 @@ export default function NikePage() {
             <div
                 key={index}
                 className="relative bg-white rounded-xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600 overflow-hidden"
-                style={{ width: "300px", height: "450px", margin: "auto" }}
-            >
-                {/* Imagen con superposición */}
+                style={{ width: "300px", height: "450px", margin: "auto" }}>
                 <div className="relative h-full">
                     <img
                         src={item.imgSrc}
@@ -176,15 +171,13 @@ export default function NikePage() {
                     <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 hover:opacity-100">
                         <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
                         <p className="text-sm text-gray-200 px-4">{item.description}</p>
-                    </div>
-                    
+                    </div>    
                 </div>
-                
             </div>
-            
         ))}
     </div>
-    <div className="py-12 bg-blue-600 text-white text-center">
+</div>
+              <div className="py-12 bg-blue-600 text-white text-center">
                 <h2 className="text-4xl font-bold mb-6">Suscríbete para Más</h2>
                 <p className="text-lg mb-6">Recibe ofertas exclusivas y las últimas novedades directamente en tu correo.</p>
                 <form className="flex justify-center">
@@ -201,8 +194,6 @@ export default function NikePage() {
                     </button>
                 </form>
             </div>
-</div>
-
             </div>
     );
 }
