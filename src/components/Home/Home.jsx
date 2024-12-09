@@ -279,13 +279,19 @@ export default function AutoSlider() {
 
                     <div className="w-full bg-black rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                         <img
-                            src="https://sportfitbg.com/wp-content/uploads/2024/10/nb-990v4-1982-1-1920x1281-1.jpg"
+                            src="https://workshopcol.co/cdn/shop/files/image00041.jpg?v=1713991623&width=1946"
                             alt="Producto 3"
                             className="w-full h-56 object-cover rounded-t-xl"
                         />
                         <div className="p-6 text-center">
-                            <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Classic 990</h3>
+                            <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Classic 9060</h3>
                             <p className="text-lg text-gray-300 mb-4">Comodidad en cada paso con el estilo clásico de New Balance.</p>
+                            <Link to="/products/3">
+            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+                Ver Más
+            </button>
+        </Link>
+           
                         </div>
                     </div>
 
@@ -298,6 +304,12 @@ export default function AutoSlider() {
                         <div className="p-6 text-center">
                             <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Superstar</h3>
                             <p className="text-lg text-gray-300 mb-4">Un diseño clásico para un look casual y urbano.</p>
+                            <Link to="/products/33">
+            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+                Ver Más
+            </button>
+        </Link>
+           
                         </div>
                     </div>
                 </div>
