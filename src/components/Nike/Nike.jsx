@@ -24,9 +24,8 @@ export default function NikePage() {
 
     return (
         <div className="relative bg-gray-900">
-            {/* Video de fondo */}
-            <div className="relative w-full h-screen overflow-hidden">
-                <div className="absolute inset-0">
+         <div className="relative w-full h-screen overflow-hidden">
+             <div className="absolute inset-0">
                     <iframe
                         src="https://www.youtube.com/embed/o1ud8Z6JTew?autoplay=1&mute=1&loop=1&playlist=o1ud8Z6JTew"
                         title="Nike Commercial"
@@ -73,90 +72,137 @@ export default function NikePage() {
                 </div>
             </div>
 
-            {/* Lo más destacado de Nike */}
             <div className="mt-32 text-white text-center">
-                <h2 className="text-5xl font-extrabold mb-12">Lo más destacado de Nike</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mx-4">
-                    <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
-                        <img
-                            src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e3cd566f-fc36-420f-a1b9-c4283cb87b32/air-force-1-07-zapatos-2P7hL9.png"
-                            alt="Nike Air Force 1"
-                            className="w-full h-56 object-cover rounded-lg mb-6"
-                        />
-                        <h3 className="text-2xl font-semibold text-white mb-4">Nike Air Force 1</h3>
-                        <p className="text-gray-400">Un ícono del calzado que nunca pasa de moda. Diseño atemporal para todos los días.</p>
-                    </div>
-                    <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
-                        <img
-                            src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/e56fa4e0-3ad5-4676-b727-67bfe59c95a9/nike-zoomx-vaporfly-next-2-zapatos-de-correr-vzrlgX.png"
-                            alt="Nike ZoomX Vaporfly Next%"
-                            className="w-full h-56 object-cover rounded-lg mb-6"
-                        />
-                        <h3 className="text-2xl font-semibold text-white mb-4">Nike ZoomX Vaporfly Next% 2</h3>
-                        <p className="text-gray-400">Calzado de alto rendimiento, ideal para maratones y carreras largas. Siente la velocidad.</p>
-                    </div>
-                    <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
-                        <img
-                            src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/178e56bb-45f9-4e7d-b4b2-69c7b8a0d11e/nike-dri-fit-elite-top-sudadera-de-fitness-TqXgq8.png"
-                            alt="Nike Dri-FIT Elite"
-                            className="w-full h-56 object-cover rounded-lg mb-6"
-                        />
-                        <h3 className="text-2xl font-semibold text-white mb-4">Nike Dri-FIT Elite</h3>
-                        <p className="text-gray-400">Tecnología Dri-FIT que mantiene la transpiración a raya mientras entrenas. Confort y frescura.</p>
-                    </div>
-                </div>
-            </div>
+      <h2 className="text-5xl font-extrabold mb-12">Lo más destacado de Nike</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16 mx-4">
+        <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
+          <img
+            src="https://media.gq.com/photos/5fa2ce5dc0e38edb6bd3ac91/16:9/w_1280,c_limit/airmax.jpg"
+            alt="Zapatillas Nike Air Max 90"
+            className="w-full h-72 object-cover rounded-lg mb-6"
+          />
+          <h3 className="text-3xl font-semibold text-white mb-4">
+            Zapatillas Nike Air Max 90
+          </h3>
+          <p className="text-gray-400 mb-6">
+            Un ícono del calzado que nunca pasa de moda. Diseño atemporal para todos los días.
+          </p>
+          <Link
+            to="/products/5"
+            className="bg-indigo-600 text-white py-3 px-6 rounded-lg shadow hover:bg-indigo-700 transition-all duration-300"
+          >
+            Ver productos
+          </Link>
+        </div>
+        <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
+          <img
+            src="https://www.marathon.cl/on/demandware.static/-/Sites-catalog-equinox/default/dwb1f25974/images/marathon/196604405164_2-20240903120000-mrtChile.jpg"
+            alt="Zapatillas Nike Gamma Force"
+            className="w-full h-72 object-cover rounded-lg mb-6"
+          />
+          <h3 className="text-3xl font-semibold text-white mb-4">
+            Zapatillas Nike Gamma Force
+          </h3>
+          <p className="text-gray-400 mb-6">
+            Calzado de alto rendimiento, ideal para maratones y carreras largas. Siente la velocidad.
+          </p>
+          <Link
+            to="/products/11"
+            className="bg-indigo-600 text-white py-3 px-6 rounded-lg shadow hover:bg-indigo-700 transition-all duration-300"
+          >
+            Ver productos
+          </Link>
+        </div>
+        <div className="bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
+          <img
+            src="https://e0.pxfuel.com/wallpapers/661/136/desktop-wallpaper-sean-wotherspoon-x-nike-air-max-97-1-bambas-nike-zapatillas-lacoste-zapatos-nike.jpg"
+            alt="Zapatillas Nike Air Max 97 Se Iron Grey"
+            className="w-full h-72 object-cover rounded-lg mb-6"
+          />
+          <h3 className="text-3xl font-semibold text-white mb-4">
+            Zapatillas Nike Air Max 97 Se Iron Grey
+          </h3>
+          <p className="text-gray-400 mb-6">
+            Tecnología que mantiene la transpiración a raya mientras las usas. Confort y frescura.
+          </p>
+          <Link
+            to="/products/23"
+            className="bg-indigo-600 text-white py-3 px-6 rounded-lg shadow hover:bg-indigo-700 transition-all duration-300"
+          >
+            Ver productos
+          </Link>
+        </div>
+      </div>
+    </div>
 
             {/* Características de Nike */}
             <div className="mt-32 px-8 text-center">
-                <h2 className="text-5xl font-extrabold text-white mb-16">Características clave de Nike</h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mx-4">
-                    <div className="bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
-                        <div className="flex justify-center items-center mb-6">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/0/06/Nike_logo.svg"
-                                alt="Innovación"
-                                className="w-20 h-20"
-                            />
-                        </div>
-                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Innovación</h3>
-                        <p className="text-gray-600">Tecnologías avanzadas diseñadas para ofrecerte el máximo rendimiento.</p>
+    <h2 className="text-5xl font-extrabold text-white mb-16">Características clave de Nike</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mx-4">
+        {[
+            {
+                title: "Innovación",
+                description: "Tecnologías avanzadas diseñadas para ofrecerte el máximo rendimiento.",
+                imgSrc: "https://static.nike.com/a/images/f_auto/dpr_3.0,cs_srgb/h_363,c_limit/a4f5f089-4cba-470b-b66e-86ccc94f3106/nike-debuta-tecnolog%C3%ADa-innovadora-con-el-lanzamiento-del-calzado-air-max-dn.jpg",
+            },
+            {
+                title: "Estilo",
+                description: "Diseños icónicos que combinan estética y funcionalidad.",
+                imgSrc: "https://fotos.perfil.com/2023/07/06/trim/720/410/nikeperu-1604268.jpeg",
+            },
+            {
+                title: "Confort",
+                description: "Materiales suaves y flexibles que se adaptan a tu cuerpo para un ajuste perfecto.",
+                imgSrc: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQlP0D61QtiSZHIKug_OSx1EOJZ5g6FE_X_Q&s",
+            },
+            {
+                title: "Durabilidad",
+                description: "Materiales de alta calidad que garantizan una larga vida útil.",
+                imgSrc: "https://cdn.shopify.com/s/files/1/0285/9715/8027/files/Air_Force_1_Low_FlaxWheat_3_600x600.png?v=1714179488",
+            },
+        ].map((item, index) => (
+            <div
+                key={index}
+                className="relative bg-white rounded-xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600 overflow-hidden"
+                style={{ width: "300px", height: "450px", margin: "auto" }}
+            >
+                {/* Imagen con superposición */}
+                <div className="relative h-full">
+                    <img
+                        src={item.imgSrc}
+                        alt={item.title}
+                        className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 hover:opacity-100">
+                        <h3 className="text-2xl font-bold text-white mb-2">{item.title}</h3>
+                        <p className="text-sm text-gray-200 px-4">{item.description}</p>
                     </div>
-                    <div className="bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
-                        <div className="flex justify-center items-center mb-6">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/a/af/Nike_Swoosh_Logo.svg"
-                                alt="Estilo"
-                                className="w-20 h-20"
-                            />
-                        </div>
-                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Estilo</h3>
-                        <p className="text-gray-600">Diseños icónicos que combinan estética y funcionalidad.</p>
-                    </div>
-                    <div className="bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
-                        <div className="flex justify-center items-center mb-6">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Nike_Spree_Logo_2017.svg"
-                                alt="Confort"
-                                className="w-20 h-20"
-                            />
-                        </div>
-                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Confort</h3>
-                        <p className="text-gray-600">Materiales suaves y flexibles que se adaptan a tu cuerpo para un ajuste perfecto.</p>
-                    </div>
-                    <div className="bg-white p-10 rounded-xl shadow-xl hover:shadow-2xl transform transition-all hover:scale-105 hover:border-4 border-indigo-600">
-                        <div className="flex justify-center items-center mb-6">
-                            <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/7/76/Nike_Wordmark.svg"
-                                alt="Durabilidad"
-                                className="w-20 h-20"
-                            />
-                        </div>
-                        <h3 className="text-2xl font-semibold text-gray-800 mb-4">Durabilidad</h3>
-                        <p className="text-gray-600">Materiales de alta calidad que garantizan una larga vida útil.</p>
-                    </div>
+                    
                 </div>
+                
             </div>
-        </div>
+            
+        ))}
+    </div>
+    <div className="py-12 bg-blue-600 text-white text-center">
+                <h2 className="text-4xl font-bold mb-6">Suscríbete para Más</h2>
+                <p className="text-lg mb-6">Recibe ofertas exclusivas y las últimas novedades directamente en tu correo.</p>
+                <form className="flex justify-center">
+                    <input
+                        type="email"
+                        placeholder="Tu correo electrónico"
+                        className="px-4 py-2 rounded-l-lg focus:outline-none text-black"
+                    />
+                    <button
+                        type="submit"
+                        className="bg-white text-blue-600 px-6 py-2 rounded-r-lg font-bold hover:bg-gray-200 transition-all"
+                    >
+                        Suscribirme
+                    </button>
+                </form>
+            </div>
+</div>
+
+            </div>
     );
 }

@@ -88,46 +88,51 @@ export default function NewBalancePage() {
                 </div>
             </div>
 
-            <div className="py-12 bg-gray-100">
-                <h2 className="text-4xl font-bold text-center mb-8">Inspiración New Balance</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-12">
-                    {galleryImages.map((image, index) => (
-                        <div key={index} className="relative group">
-                            <img
-                                src={image.src}
-                                alt="Galería New Balance"
-                                className="w-full h-64 object-cover rounded-lg shadow-lg transition-transform transform group-hover:scale-105"
-                            />
-                            <p className="absolute bottom-4 left-4 bg-black bg-opacity-70 text-white px-4 py-2 rounded-lg text-sm shadow-lg">
-                                {image.text}
-                            </p>
-                        </div>
-                    ))}
+            <div className="py-12 bg-gradient-to-r from-gray-700 via-gray-900 to-gray-700">
+    <h2 className="text-4xl font-extrabold text-center text-white mb-16">Inspiración New Balance</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-6">
+        {galleryImages.map((image, index) => (
+            <div
+                key={index}
+                className="relative group rounded-xl overflow-hidden shadow-lg transform transition-all hover:scale-105 hover:shadow-2xl"
+            >
+                <img
+                    src={image.src}
+                    alt="Galería New Balance"
+                    className="w-full h-64 object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                    <p className="text-white font-bold text-xl px-6 text-center">{image.text}</p>
                 </div>
             </div>
+        ))}
+    </div>
+</div>
 
-            <div className="py-12 bg-white">
-                <h2 className="text-4xl font-bold text-center mb-8">Productos Destacados</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-12">
-                    {featuredProducts.map((product, index) => (
-                        <div
-                            key={index}
-                            className="bg-gray-100 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
-                        >
-                            <img
-                                src={product.image}
-                                alt={product.title}
-                                className="w-full h-40 object-cover rounded-t-lg"
-                            />
-                            <h3 className="text-xl font-bold mt-4">{product.title}</h3>
-                            <p className="text-gray-700 mt-2">{product.description}</p>
-                            <Link
-                                to={product.link}
-                                className="inline-block mt-4 bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-bold transform hover:scale-105 hover:bg-blue-700 transition-all"
-                            >
-                                Ver Producto
-                            </Link>
-                        </div>
+<div className="py-12 bg-gradient-to-r from-gray-800 via-gray-900 to-gray-800">
+    <h2 className="text-4xl font-extrabold text-center text-white mb-16">Productos Destacados</h2>
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 px-6">
+        {featuredProducts.map((product, index) => (
+            <div
+                key={index}
+                className="bg-gray-800 rounded-xl shadow-lg transform transition-all hover:scale-105 hover:shadow-2xl overflow-hidden"
+            >
+                <img
+                    src={product.image}
+                    alt={product.title}
+                    className="w-full h-48 object-cover rounded-t-xl"
+                />
+                <div className="p-6">
+                    <h3 className="text-2xl font-bold text-white">{product.title}</h3>
+                    <p className="text-gray-300 mt-2">{product.description}</p>
+                    <Link
+                        to={product.link}
+                        className="inline-block mt-6 bg-blue-600 text-white px-8 py-3 rounded-full font-bold text-sm transform hover:scale-105 hover:bg-blue-700 transition-all"
+                    >
+                        Ver Producto
+                    </Link>
+                </div>
+            </div>
                     ))}
                 </div>
             </div>
@@ -148,25 +153,6 @@ export default function NewBalancePage() {
                         Suscribirme
                     </button>
                 </form>
-            </div>
-
-            <div className="py-12 bg-gray-900 text-white">
-                <h2 className="text-4xl font-bold text-center mb-8">Lo Que Dicen Nuestros Clientes</h2>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-12">
-                    {[
-                        "¡La mejor experiencia deportiva con New Balance!",
-                        "El equilibrio perfecto entre estilo y rendimiento.",
-                        "¡No usaría otra marca para correr!",
-                    ].map((testimony, index) => (
-                        <div
-                            key={index}
-                            className="bg-gray-800 p-6 rounded-lg shadow-lg text-center"
-                        >
-                            <p className="italic">{`"${testimony}"`}</p>
-                            <p className="mt-4 font-bold">- Cliente {index + 1}</p>
-                        </div>
-                    ))}
-                </div>
             </div>
         </div>
     );

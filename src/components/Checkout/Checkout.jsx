@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom"; 
 
 export default function Checkout() {
   const [formData, setFormData] = useState({
@@ -33,12 +34,12 @@ export default function Checkout() {
         <p className="text-lg text-gray-300 text-center mb-6">
           Tu pedido ha sido recibido y estamos procesándolo.
         </p>
-        <button
-          onClick={() => setIsSubmitted(false)}
+        <Link
+          to="/products" 
           className="bg-gradient-to-r from-purple-500 to-indigo-500 text-white py-3 px-6 rounded-full text-lg shadow-lg hover:from-purple-600 hover:to-indigo-600 transition-all duration-300"
         >
           Realizar otra compra
-        </button>
+        </Link>
       </div>
     );
   }

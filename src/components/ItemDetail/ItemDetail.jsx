@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getProductById } from "../../data/Zapatilla";
 import useStore from "../../Store/Store";
 import Loading from "../Loading/Loading.jsx";
+import { Link } from 'react-router-dom';
 
 export default function ItemDetail() {
   const { productId } = useParams();
@@ -132,7 +133,9 @@ export default function ItemDetail() {
               Añadir al carrito
             </button>
             <button className="flex-1 bg-gray-700 text-white py-2 rounded-lg hover:bg-gray-600 transition">
-              Comprar ahora
+               <Link to="/checkout" className="block w-full h-full text-center">
+                   Comprar ahora
+                </Link>
             </button>
           </div>
 
