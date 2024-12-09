@@ -308,10 +308,10 @@ export default function AutoSlider() {
             <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
                 Ver Más
             </button>
-        </Link>
-           
-                        </div>
-                    </div>
+        </Link>       
+       
+        </div>
+             </div>
                 </div>
             </div>
 
