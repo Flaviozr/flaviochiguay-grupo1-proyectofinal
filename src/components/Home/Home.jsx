@@ -44,8 +44,7 @@ export default function AutoSlider() {
                     <img
                         src={banners[currentIndex].imgUrl}
                         alt={`Banner ${currentIndex + 1}`}
-                        className="w-full h-[500px] object-cover transform transition-all duration-500"
-                    />
+                        className="w-full h-[500px] object-cover transform transition-all duration-500"/>
                     <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
                         <div className="text-center px-8 py-6">
                             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-4 tracking-wide transform transition-all duration-300">
@@ -56,8 +55,7 @@ export default function AutoSlider() {
                             </p>
                             <Link
                                 to="/products"
-                                className="text-lg text-black bg-yellow-500 py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-600 hover:shadow-xl transform transition-all duration-300 ease-in-out"
-                            >
+                                className="text-lg text-black bg-yellow-500 py-3 px-8 rounded-lg shadow-lg hover:bg-yellow-600 hover:shadow-xl transform transition-all duration-300 ease-in-out">
                                 ¡Explora la Colección!
                             </Link>
                         </div>
@@ -65,14 +63,12 @@ export default function AutoSlider() {
                         
                 <button
                     onClick={prevSlide}
-                    className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-black p-2 rounded-full hover:bg-gray-800 transition-all duration-300"
-                >
+                    className="absolute top-1/2 left-0 transform -translate-y-1/2 text-white bg-black p-2 rounded-full hover:bg-gray-800 transition-all duration-300">
                     &lt;
                 </button>
                 <button
                     onClick={nextSlide}
-                    className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white bg-black p-2 rounded-full hover:bg-gray-800 transition-all duration-300"
-                >
+                    className="absolute top-1/2 right-0 transform -translate-y-1/2 text-white bg-black p-2 rounded-full hover:bg-gray-800 transition-all duration-300" >
                     &gt;
                 </button>
             </div>
@@ -124,21 +120,18 @@ export default function AutoSlider() {
             />
         </div>
     </div>
-
-            <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-16">
                 <h2 className="text-5xl font-semibold text-center text-white mb-20">
                     Nuestras Marcas
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
                     <Link
                         to="/adidas"
-                        className="group relative overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-xl"
-                    >
+                        className="group relative overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-xl" >
                         <img
                             src="https://w7.pngwing.com/pngs/475/281/png-transparent-adidas-logo-adidas-logo-adidas-text-photography-shoes-thumbnail.png"
                             alt="Adidas"
-                            className="w-full h-64 object-contain bg-white p-6 transition-all duration-500 ease-in-out transform group-hover:scale-110"
-                        />
+                            className="w-full h-64 object-contain bg-white p-6 transition-all duration-500 ease-in-out transform group-hover:scale-110"/>
                         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
                             <h4 className="text-3xl font-extrabold text-white uppercase tracking-wider text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
                                 Adidas
@@ -148,13 +141,11 @@ export default function AutoSlider() {
 
                     <Link
                         to="/nike"
-                        className="group relative overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-xl"
-                    >
+                        className="group relative overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-xl" >
                         <img
                             src="https://i.pinimg.com/originals/1f/b4/7e/1fb47eae62439eb56c30e9673830d957.jpg"
                             alt="Nike"
-                            className="w-full h-64 object-contain bg-white p-6 transition-all duration-500 ease-in-out transform group-hover:scale-110"
-                        />
+                            className="w-full h-64 object-contain bg-white p-6 transition-all duration-500 ease-in-out transform group-hover:scale-110" />
                         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
                             <h4 className="text-3xl font-extrabold text-white uppercase tracking-wider text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
                                 Nike
@@ -164,13 +155,11 @@ export default function AutoSlider() {
 
                     <Link
                         to="/newbalance"
-                        className="group relative overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-xl"
-                    >
+                        className="group relative overflow-hidden rounded-xl shadow-2xl transition-transform duration-500 hover:scale-105 hover:shadow-xl">
                         <img
                             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4F3GD-ZtR9PT0Pq7eQCSyAERljB0SbYGd3w&s"
                             alt="New Balance"
-                            className="w-full h-64 object-contain bg-white p-6 transition-all duration-500 ease-in-out transform group-hover:scale-110"
-                        />
+                            className="w-full h-64 object-contain bg-white p-6 transition-all duration-500 ease-in-out transform group-hover:scale-110"/>
                         <div className="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center p-4">
                             <h4 className="text-3xl font-extrabold text-white uppercase tracking-wider text-center opacity-0 group-hover:opacity-100 transition-all duration-300 ease-in-out">
                                 New Balance
@@ -189,8 +178,7 @@ export default function AutoSlider() {
         <img
             src="https://images.pexels.com/photos/18188499/pexels-photo-18188499/free-photo-of-adidas-sneakers-on-feet.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
             alt="Adidas Urban"
-            className="w-full h-48 object-cover rounded-lg mb-4"
-        />
+            className="w-full h-48 object-cover rounded-lg mb-4"/>
         <h2 className="text-4xl font-extrabold text-white mb-4">Adidas</h2>
         <p className="text-lg text-gray-300 mb-4">
             Innovación en cada paso. Diseños audaces para un estilo único en las calles.
@@ -201,8 +189,7 @@ export default function AutoSlider() {
             </button>
         </Link>
     </div>
-
-    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
+ <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
         <img
             src="https://images.pexels.com/photos/3116969/pexels-photo-3116969.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
             alt="Nike Urban"
@@ -218,8 +205,7 @@ export default function AutoSlider() {
             </button>
         </Link>
     </div>
-
-    <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
+  <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
         <img
             src="https://www.newbalance.com/dw/image/v2/AAGI_PRD/on/demandware.static/-/Library-Sites-NBUS-NBCA/default/dw51ef2d0a/images/page-designer/2024/November/NB883_Comp_E_Image1.jpg?sw=991&sfrm=jpg"
             alt="New Balance Urban"
@@ -234,11 +220,10 @@ export default function AutoSlider() {
                 Ver Más
             </button>
         </Link>
-                    </div>
-                </div>
+      </div>
+        </div>
             </div>
-
-            <div className="container mx-auto px-4 py-24">
+             <div className="container mx-auto px-4 py-24">
                 <h2 className="text-5xl font-semibold text-center text-white mb-16">Productos Más Vendidos</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12">
                     <div className="w-full bg-black rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
@@ -255,52 +240,43 @@ export default function AutoSlider() {
                 Ver Más
             </button>
         </Link>
-           
-                        </div>
-                    </div>
-
+             </div>
+                </div>
                     <div className="w-full bg-black rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                         <img
                             src="https://cdn.sanity.io/images/c1chvb1i/production/222e1d147d9b1faff32544d6e8be3b53b66f8b0c-600x600.jpg?auto=format&fit=max&q=75&w=600"
                             alt="Producto 2"
-                            className="w-full h-56 object-cover rounded-t-xl"
-                        />
+                            className="w-full h-56 object-cover rounded-t-xl" />
                         <div className="p-6 text-center">
                             <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Ultra Boost</h3>
                             <p className="text-lg text-gray-300 mb-4">Máxima amortiguación para un confort sin igual.</p>
                             <Link to="/products/24">
-            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
-                Ver Más
-            </button>
-        </Link>
-           
+                            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+                                Ver Más
+                            </button>
+                            </Link>
                         </div>
                     </div>
-
                     <div className="w-full bg-black rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                         <img
                             src="https://workshopcol.co/cdn/shop/files/image00041.jpg?v=1713991623&width=1946"
                             alt="Producto 3"
-                            className="w-full h-56 object-cover rounded-t-xl"
-                        />
+                            className="w-full h-56 object-cover rounded-t-xl"/>
                         <div className="p-6 text-center">
                             <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Classic 9060</h3>
                             <p className="text-lg text-gray-300 mb-4">Comodidad en cada paso con el estilo clásico de New Balance.</p>
                             <Link to="/products/3">
-            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
-                Ver Más
-            </button>
-        </Link>
-           
+                            <button className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+                             Ver Más
+                             </button>
+                             </Link>
                         </div>
                     </div>
-
                     <div className="w-full bg-black rounded-xl shadow-2xl transform transition-all duration-300 hover:scale-105 hover:shadow-xl">
                         <img
                             src="https://www.shutterstock.com/image-photo/ivanofrankivsk-ukraine-may-16-2020-600nw-2367802385.jpg"
                             alt="Producto 4"
-                            className="w-full h-56 object-cover rounded-t-xl"
-                        />
+                            className="w-full h-56 object-cover rounded-t-xl"/>
                         <div className="p-6 text-center">
                             <h3 className="text-2xl text-white font-semibold mb-4">Zapatillas Superstar</h3>
                             <p className="text-lg text-gray-300 mb-4">Un diseño clásico para un look casual y urbano.</p>
@@ -309,12 +285,10 @@ export default function AutoSlider() {
                 Ver Más
             </button>
         </Link>       
-       
         </div>
-             </div>
-                </div>
+          </div>
             </div>
-
+                </div>
             <div className="container mx-auto px-4 py-24 bg-gray-900 rounded-xl shadow-xl">
                 <h2 className="text-5xl text-center text-white font-extrabold mb-16">
                     ¡Últimas Tendencias en Zapatillas Urbanas!
@@ -332,50 +306,43 @@ export default function AutoSlider() {
         </p>
         <Link
             to="/nike"
-            className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105"
-        >
+            className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
             Ver Más
         </Link>
     </div>
-
     <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
         <img
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhs4FHtpvUHowvqy-YLriqWfTK40fiAWJz-g&s"
             alt="Tendencia 2"
-            className="w-full h-48 object-cover rounded-lg mb-4"
-        />
+            className="w-full h-48 object-cover rounded-lg mb-4"/>
         <h2 className="text-4xl font-extrabold text-white mb-4">Estilo Urbano Vintage</h2>
         <p className="text-lg text-gray-300 mb-4">
             Combina lo retro con lo moderno. Zapatillas de estilo urbano vintage que nunca pasan de moda.
         </p>
         <Link
             to="/adidas"
-            className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105"
-        >
+            className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
             Ver Más
         </Link>
     </div>
-
     <div className="text-center p-8 bg-black rounded-xl shadow-2xl hover:bg-gray-800 transition duration-300 ease-in-out transform hover:scale-105">
         <img
             src="https://images2.minutemediacdn.com/image/upload/c_crop,w_1080,h_607,x_0,y_45/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/voltaxMediaLibrary/mmsport/kicks/01j9s7g4fmjcbrx5j6dt.jpg"
             alt="Tendencia 3"
-            className="w-full h-48 object-cover rounded-lg mb-4"
-        />
+            className="w-full h-48 object-cover rounded-lg mb-4"/>
         <h2 className="text-4xl font-extrabold text-white mb-4">Sneakers con Tecnología</h2>
         <p className="text-lg text-gray-300 mb-4">
             Zapatillas equipadas con la última tecnología en amortiguación y soporte para el máximo confort.
         </p>
         <Link
             to="/newbalance"
-            className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105"
-        >
-            Ver Más
-        </Link>
+            className="bg-pink-500 text-white font-semibold px-8 py-3 rounded-lg shadow-md hover:bg-pink-600 transition duration-300 ease-in-out transform hover:scale-105">
+                Ver Más
+            </Link>
+         </div>
+        </div>
     </div>
 </div>
 </div>
-            </div>
-        </div>
     );
 }
