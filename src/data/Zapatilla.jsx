@@ -377,18 +377,16 @@ export const products = [
                                     sizes: ['42','43','44'],
                                     category: 'adulto',
                                     brands: 'nike'
-                         
-                                    
-                                    },
-                                    { 
-                                        id: 35, 
-                                        img: 'https://newbalance.cl/media/catalog/product/z/a/zapatillas-urbanas-hombre-new-balance-574-bicolor-lateral_3.png?quality=80&bg-color=255,255,255&fit=bounds&height=650&width=650&canvas=650:650', 
-                                        title: 'Zapatillas Urbanas New Balance 574 Bicolor ', 
-                                        price: '67.990',
-                                        stock: 10,
-                                        sizes: ['42','43','44'],
-                                        category: 'adulto',
-                                        brands: 'newbalance'
+  },
+  { 
+       id: 35, 
+       img: 'https://newbalance.cl/media/catalog/product/z/a/zapatillas-urbanas-hombre-new-balance-574-bicolor-lateral_3.png?quality=80&bg-color=255,255,255&fit=bounds&height=650&width=650&canvas=650:650', 
+       title: 'Zapatillas Urbanas New Balance 574 Bicolor ', 
+       price: '67.990',
+       stock: 10,
+       sizes: ['42','43','44'],
+       category: 'adulto',
+       brands: 'newbalance'
                              
                                         
         },
