@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import useStore from "../../Store/Store"; // Asegúrate de que el path de Store sea correcto
+import useStore from "../../Store/Store"; 
 
 export default function Item({ id, title, price, img }) {
     const addToCart = useStore((state) => state.addToCart);
     const [showMessage, setShowMessage] = useState(false);
 
-    // Función para manejar el click en el botón "Añadir al carrito"
     const handleAddToCart = () => {
         const productToAdd = {
             id,
@@ -17,21 +16,18 @@ export default function Item({ id, title, price, img }) {
         };
         addToCart(productToAdd);
 
-        // Mostrar el mensaje de confirmación
         setShowMessage(true);
-        setTimeout(() => setShowMessage(false), 3000); // Ocultar mensaje después de 3 segundos
+        setTimeout(() => setShowMessage(false), 3000); 
     };
 
     return (
         <div className="relative flex flex-col items-center my-4 mx-3 p-4 bg-white rounded-2xl shadow-xl hover:scale-105 transform transition-all duration-300 ease-in-out">
-            {/* Mensaje de confirmación */}
             {showMessage && (
                 <div className="absolute top-2 left-1/2 transform -translate-x-1/2 bg-green-600 text-white text-sm font-semibold py-1 px-4 rounded-lg shadow-xl z-10">
                     Producto añadido al carrito ✅
                 </div>
             )}
 
-            {/* Imagen del producto */}
             <Link to={`/products/${id}`} className="w-full h-48 overflow-hidden rounded-lg mb-3 transition-transform duration-500 ease-in-out hover:scale-105">
                 <img
                     src={img}
@@ -40,7 +36,6 @@ export default function Item({ id, title, price, img }) {
                 />
             </Link>
 
-            {/* Título del producto */}
             <Link
                 to={`/products/${id}`}
                 className="text-xl font-semibold text-gray-800 mb-1 tracking-wide hover:text-yellow-500 transition duration-300"
@@ -48,10 +43,8 @@ export default function Item({ id, title, price, img }) {
                 {title}
             </Link>
 
-            {/* Precio del producto */}
             <h4 className="text-lg font-bold text-gray-700 mb-2">${price}</h4>
 
-            {/* Botones de acción */}
             <div className="flex flex-col sm:flex-row justify-between w-full space-y-3 sm:space-y-0 sm:space-x-3">
                 <Link
                     to={`/products/${id}`}

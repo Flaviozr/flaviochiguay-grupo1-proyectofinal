@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 const useStore = create((set) => ({
-    cart: [],  // Array para almacenar los productos en el carrito
+    cart: [],  
     addToCart: (product) => set((state) => {
         const existingProduct = state.cart.find(item => item.id === product.id);
         if (existingProduct) {
@@ -18,7 +18,7 @@ const useStore = create((set) => ({
         cart: state.cart.filter(item => item.id !== productId)
     })),
     clearCart: () => set(() => ({
-        cart: []  // Vaciar el carrito
+        cart: []  
     }))
 }));
 

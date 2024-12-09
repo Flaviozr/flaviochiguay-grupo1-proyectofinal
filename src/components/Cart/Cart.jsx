@@ -40,14 +40,12 @@ export default function CartPage() {
           Carrito de Compras
         </h2>
 
-        {/* Lista de Productos */}
         <div className="space-y-6">
           {cart.map((item) => (
             <div
               key={item.id}
               className="flex flex-col sm:flex-row items-center justify-between bg-gradient-to-r from-gray-700 to-gray-800 p-6 rounded-lg shadow-lg gap-6"
             >
-              {/* Imagen y Detalles */}
               <div className="flex items-center gap-4 sm:gap-6 w-full sm:w-2/3">
                 <img
                   src={item.img}
@@ -71,7 +69,6 @@ export default function CartPage() {
                 </div>
               </div>
 
-              {/* Botón Eliminar */}
               <button
                 onClick={() => handleRemove(item.id)}
                 className="w-full sm:w-auto bg-gradient-to-r from-red-500 to-red-700 text-white py-2 px-4 rounded-lg shadow-lg hover:from-red-600 hover:to-red-800 transition-all duration-300"
@@ -82,7 +79,6 @@ export default function CartPage() {
           ))}
         </div>
 
-        {/* Total y Acciones */}
         <div className="mt-12 bg-gradient-to-r from-gray-700 to-gray-800 p-8 rounded-lg shadow-lg">
           <div className="flex flex-col sm:flex-row justify-between items-center mb-6">
             <h3 className="text-xl sm:text-2xl font-bold">Total:</h3>

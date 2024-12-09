@@ -16,7 +16,6 @@ export default function Product() {
                     </p>
                 </div>
 
-                {/* Contenedor para los productos */}
                 <div className="bg-gray-800 rounded-3xl shadow-2xl p-10 transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-yellow-500/50 mt-10">
                     <ItemList />
                 </div>

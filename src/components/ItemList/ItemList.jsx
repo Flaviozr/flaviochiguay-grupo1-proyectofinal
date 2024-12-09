@@ -43,10 +43,8 @@ export default function ItemList({ initialProducts }) {
             ) : (
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     
-                    {/* Barra de búsqueda */}
                     <Search setSearchQuery={setSearchQuery} />
 
-                    {/* Botones de categoría */}
                     <div className="mb-6 flex flex-wrap justify-center gap-4">
                         <button
                             onClick={() => handleCategoryClick('')}
@@ -74,7 +72,6 @@ export default function ItemList({ initialProducts }) {
                         </button>
                     </div>
 
-                    {/* Cuadrícula de productos */}
                     <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
                         {filteredProducts.map((prod) => (
                             <div 
