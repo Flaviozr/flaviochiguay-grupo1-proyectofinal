@@ -294,21 +294,116 @@ export const products = [
             stock: 10,
             sizes: ['42','43','44'],
             category: 'nino',
-            brands: 'newbalance',   
+            brands: 'nike'
         },
              
         { 
             id: 28, 
-            img: 'https://www.blockstore.cl/cdn/shop/files/p-BB480LBT-1_1800x.jpg?v=1690913330', 
-            title: 'Zapatilla New Balance 480 L ', 
-            price: '67.990',
+            img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cfc9bd21f88e4f0bb687629394df54e4_9366/Zapatillas_London_96_Negro_IH4773_01_standard.jpg', 
+            title: 'Zapatillas Adidas London 96 ', 
+            price: '70.990',
             stock: 10,
             sizes: ['42','43','44'],
             category: 'adulto',
-            brands: 'newbalance', 
- 
-            
+            brands: 'adidas'
             },
+          
+            { 
+                id: 29, 
+                img: 'https://maszapatillas.com/100639-foto_producto_real/zapatilla-new-balance-574.jpg', 
+                title: 'Zapatilla NEW BALANCE 574 | ', 
+                price: '67.990',
+                stock: 10,
+                sizes: ['42','43','44'],
+                category: 'adulto',
+                brands: 'newbalance'
+     
+                
+                },
+                { 
+                    id: 30, 
+                    img: 'https://nikeclprod.vtexassets.com/arquivos/ids/1092691/FN6919_001_A_PREM.jpg?v=638587400182130000', 
+                    title: 'Zapatillas Nike Air Max Pulse SE ', 
+                    price: '59.990',
+                    stock: 10,
+                    sizes: ['42','43','44'],
+                    category: 'adulto',
+                    brands: 'nike'
+         
+                    
+                    },
+                    { 
+                        id: 31, 
+                        img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/2d0764794ac242d39772e269b68a9899_9366/Zapatillas_Adi2000_Negro_IF8821_01_standard.jpg', 
+                        title: 'Zapatillas Adidas Adi2000 ', 
+                        price: '74.990',
+                        stock: 10,
+                        sizes: ['42','43','44'],
+                        category: 'adulto',
+                        brands: 'adidas'
+             
+                        
+                        },
+                        { 
+                            id: 32, 
+                            img: 'https://newbalance.cl/media/catalog/product/z/a/zapatillas-running-hombre-new-balance-1080-v13-azul-marino-lateral.png?quality=80&bg-color=255,255,255&fit=bounds&height=650&width=650&canvas=650:650', 
+                            title: 'Zapatillas Running Hombre New Balance 1080 V13 Azul Marino ', 
+                            price: '67.990',
+                            stock: 10,
+                            sizes: ['42','43','44'],
+                            category: 'adulto',
+                            brands: 'newbalance'
+                 
+                            
+                            },
+                            { 
+                                id: 33, 
+                                img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/1a6c516af64c4832829354533392a713_9366/SUPERSTAR_II_Negro_JI0079_01_standard.jpg', 
+                                title: 'Zapatilla Adidas SUPERSTAR II ', 
+                                price: '67.990',
+                                stock: 10,
+                                sizes: ['42','43','44'],
+                                category: 'adulto',
+                                brands: 'adidas' 
+                     
+                                
+                                },
+                                { 
+                                    id: 34, 
+                                    img: 'https://nikeclprod.vtexassets.com/arquivos/ids/1137155-800-800?v=638653073144670000&width=800&height=800&aspect=true', 
+                                    title: 'Zapatilla Nike Air Max Verse ', 
+                                    price: '67.990',
+                                    stock: 10,
+                                    sizes: ['42','43','44'],
+                                    category: 'adulto',
+                                    brands: 'nike'
+                         
+                                    
+                                    },
+                                    { 
+                                        id: 35, 
+                                        img: 'https://newbalance.cl/media/catalog/product/z/a/zapatillas-urbanas-hombre-new-balance-574-bicolor-lateral_3.png?quality=80&bg-color=255,255,255&fit=bounds&height=650&width=650&canvas=650:650', 
+                                        title: 'Zapatillas Urbanas New Balance 574 Bicolor ', 
+                                        price: '67.990',
+                                        stock: 10,
+                                        sizes: ['42','43','44'],
+                                        category: 'adulto',
+                                        brands: 'newbalance'
+                             
+                                        
+        },
+    { 
+         id: 36, 
+        img: 'https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4ae5e09da4474c70b4ecfabf5a2d3a3c_9366/CAMPUS_VULC_Cafe_IH5388_01_standard.jpg', 
+         title: 'Zapatilla Adidas CAMPUS VULC', 
+         price: '67.990',
+         stock: 10,
+         sizes: ['42','43','44'],
+        category: 'adulto',
+        brands: 'adidas', 
+                                 
+                                            
+        },
             ];
             export const getProducts = () => {
                 return new Promise((res) => {

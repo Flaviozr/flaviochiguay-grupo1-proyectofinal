@@ -13,7 +13,7 @@ export default function About() {
                 </h1>
 
                 <p className="text-lg text-gray-300 mb-8 text-center">
-                    En <span className="font-extrabold text-pink-500">RealKing Store</span>, somos apasionados por ofrecer la mejor selección de zapatillas y accesorios de las marcas más reconocidas a nivel mundial. Nuestra misión es proporcionar a nuestros clientes productos de alta calidad, estilo y comodidad, todo bajo el mismo techo.
+                 <span className="font-extrabold text-pink-500">RealKing Store</span>, somos apasionados por ofrecer la mejor selección de zapatillas y accesorios de las marcas más reconocidas a nivel mundial. Nuestra misión es proporcionar a nuestros clientes productos de alta calidad, estilo y comodidad, todo bajo el mismo techo.
                 </p>
 
                 <div className="flex flex-col md:flex-row gap-8">

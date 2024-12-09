@@ -19,7 +19,7 @@ export default function Checkout() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes manejar la lógica para enviar los datos del pedido.
+
     console.log("Datos enviados:", formData);
     setIsSubmitted(true);
   };
@@ -53,7 +53,6 @@ export default function Checkout() {
           onSubmit={handleSubmit}
           className="bg-gradient-to-r from-gray-700 to-gray-800 p-8 rounded-lg shadow-lg space-y-6"
         >
-          {/* Campos del Formulario */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div>
               <label className="block text-sm font-bold mb-2">Nombre Completo</label>
@@ -123,7 +122,6 @@ export default function Checkout() {
             </div>
           </div>
 
-          {/* Botón de Enviar */}
           <button
             type="submit"
             className="w-full bg-gradient-to-r from-green-500 to-green-700 text-white py-3 px-6 rounded-lg shadow-lg hover:from-green-600 hover:to-green-800 transition-all duration-300"
