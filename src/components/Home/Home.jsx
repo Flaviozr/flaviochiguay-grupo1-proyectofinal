@@ -83,7 +83,7 @@ export default function AutoSlider() {
     </p>
     <p className="text-xl text-white max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-lg">
         Tenemos lo que necesitas para conquistar las calles: 
-        <span className="font-bold text-yellow-500">Adidas</span>, <span className="font-bold text-yellow-500">Nike</span>, <span className="font-bold text-yellow-500">Jordan</span> y muchas más. 
+        <span className="font-bold text-yellow-500">Adidas</span>, <span className="font-bold text-yellow-500">Nike</span>, <span className="font-bold text-yellow-500">New balance. </span>
         Todo pensado para ti, porque aquí no solo compras, <span className="font-extrabold text-yellow-500">PISAS FUERTE.</span>
     </p>
     <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed drop-shadow-md">
